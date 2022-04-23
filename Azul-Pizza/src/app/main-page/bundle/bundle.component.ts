@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BundleComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit(): void {

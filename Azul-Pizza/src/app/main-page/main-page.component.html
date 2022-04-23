@@ -1,1 +1,26 @@
 <p>main-page works!</p>
+
+<div>
+    <button type="button" class="buttonSpace" (click)="showMainPage()"> List</button>
+    <button type="button" class="buttonSpace" (click)="showDeals()"> Add</button>
+</div>
+
+<div *ngIf = "displayCart">
+    <app-shopping-cart-card></app-shopping-cart-card>
+</div>
+
+<div *ngIf = "displayMain">
+    <app-pizza-card></app-pizza-card>
+</div>
+
+<div *ngIf = "displayPizzaBuilder">
+    <app-pizza-builder></app-pizza-builder>
+</div>
+
+<div *ngIf = "displayDeal">
+    <!-- Will need some condition to show pizzas under $10 -->
+    <div> 
+        <app-pizza-card></app-pizza-card>
+    </div>
+    <app-bundle></app-bundle>
+</div>
