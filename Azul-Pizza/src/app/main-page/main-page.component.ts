@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PREMADES } from 'src/app/premadePizzaList';
+import { Pizza } from 'src/app/pizza';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
+  lister: Pizza[] = PREMADES;
   displayMain: boolean = true;
   displayDeal: boolean = false;
   displayPizzaBuilder: boolean = false;
   displayCart: boolean = false;
-
+  x:number = 0
+  counter: number = this.x++;
   constructor() { }
 
   ngOnInit(): void {
@@ -40,6 +42,9 @@ export class MainPageComponent implements OnInit {
     this.displayDeal = false;
     this.displayPizzaBuilder = true;
     this.displayCart = false;
+  }
+  getName(x:number){
+    return this.lister[++x].name;
   }
 
 

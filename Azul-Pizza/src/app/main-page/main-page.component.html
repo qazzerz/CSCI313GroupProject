@@ -10,7 +10,10 @@
 </div>
 
 <div *ngIf = "displayMain">
-    <app-pizza-card></app-pizza-card>
+    <div *ngFor="let x of lister">
+    <app-pizza-card
+    [name]="lister[0].name"></app-pizza-card>
+    </div>
 </div>
 
 <div *ngIf = "displayPizzaBuilder">
