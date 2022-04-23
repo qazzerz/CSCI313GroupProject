@@ -11,7 +11,7 @@ import {Pizza} from './pizza'
 // constructor(private serShopping: this.ShoppingCartService) { }
 //then you can call the service methods
 export class ShoppingCartService {
-  shoppingCartList: Pizza[]=[];
+  shoppingCartList: any[]=[];
   constructor() { }
 
   getCartList(){
