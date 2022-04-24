@@ -2,3 +2,6 @@ img{
     width: 125px ;
     height: 125px;
 }
+.card1 {
+    display: inline-block;
+}
