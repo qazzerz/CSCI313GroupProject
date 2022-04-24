@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Pizza } from 'src/app/pizza';
 import { CustomPizza } from 'src/app/pizza';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -11,19 +12,29 @@ import { CustomPizza } from 'src/app/pizza';
 })
 export class PizzaBuilderComponent implements OnInit {
 
-  constructor() { }
+  
 
-    topping: string[] = [];
+  constructor() { 
+    
+  }
+  @Input()
+    toppings: string[] = [];
+    topping: string = "";
     sauce: string = "";
     cheese: string = "";
     crust: string = "";
 
     custPizza = new CustomPizza();
 
-onSubmit(from: NgForm)
-{
 
+   
+pushToArray(top: string)
+{
+  this.toppings.push(top);
 }
+
+
+
 
   ngOnInit(): void {
   }
