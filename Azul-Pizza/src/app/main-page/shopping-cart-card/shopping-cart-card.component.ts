@@ -18,12 +18,15 @@ export class ShoppingCartCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartList=this.cartListService.getCartList();
+    for(let l=0;l>this.cartList.length;){
+      this.AddToTotal(this.cartList[l].price);
+    }
     
   }
   testItem(){
     this.cartListService.addPizza(this.testaddItem[1]);
     this.AddToTotal(this.testaddItem[1].price.valueOf());
-    console.log(this.total)
+    
   }
 
   AddToTotal(newNum:number){
