@@ -1,5 +1,7 @@
 export interface Pizza {
     name: string;
+    price: number;
+    desciption: string;
     toppings: string [];
     sauce: string;
     cheese: string;
