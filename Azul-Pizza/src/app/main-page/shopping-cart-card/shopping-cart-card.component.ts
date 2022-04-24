@@ -8,7 +8,7 @@ import {ShoppingCartService} from'../../shopping-cart.service';
   providers: [ShoppingCartService]
 })
 export class ShoppingCartCardComponent implements OnInit {
-  cartlist: any[]= ['adadada','adadad','dadada'];
+  cartlist: any[]= [];
 
   constructor(private cartListService:ShoppingCartService) { }
 
