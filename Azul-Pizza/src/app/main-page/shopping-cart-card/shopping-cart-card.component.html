@@ -1,15 +1,18 @@
 
-<p>main-page works!</p>
-
+<button (click)="testItem()">add test item</button>
+<button (click)="total=100">da</button>
+<div >
+    <li *ngFor = "let item of cartList">
+         <span>{{item.name}}   ${{item.price}}</span>
+    </li>
+</div>
+<div>
+    subtotal  {{total}}
+</div>
 <div>
   <button>
       checkout
   </button>
 </div>
 
-<div >
-    <li *ngfor cartList>
-
-    </li>
-</div>
    

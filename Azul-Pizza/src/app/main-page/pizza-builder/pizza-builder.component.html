@@ -5,8 +5,8 @@
         </tr>
         <tr>
             <td>
-                <input type="radio" value="handTossed" name="crust" > Hand Tossed
-                <input type="radio" value="pan" name="crust"> Pan
+                <input [(ngModel)]="crust" type="radio" value="Hand Tossed" name="crust" > Hand Tossed
+                <input [(ngModel)]="crust" type="radio" value="Pan" name="crust"> Pan
             </td>
         </tr>
         <tr>
@@ -14,9 +14,9 @@
         </tr>
         <tr>
             <td>
-                <input type="radio" value="light" name="cheese"> Light
-                <input type="radio" value="regular" name="cheese"> Regular
-                <input type="radio" value="extra" name="cheese"> Extra
+                <input [(ngModel)]="cheese" type="radio" value="Light" name="cheese"> Light
+                <input [(ngModel)]="cheese" type="radio" value="Regular" name="cheese"> Regular
+                <input [(ngModel)]="cheese" type="radio" value="Rxtra" name="cheese"> Extra
             </td>
         </tr>
         <tr>
@@ -24,10 +24,10 @@
         </tr>
         <tr>
             <td>
-                <input type="radio" value="none" name="sauce"> None
-                <input type="radio" value="light" name="sauce"> Light
-                <input type="radio" value="regular" name="sauce"> Regular
-                <input type="radio" value="extra" name="sauce"> Extra                
+                <input [(ngModel)]="sauce" type="radio" value="None" name="sauce"> None
+                <input [(ngModel)]="sauce" type="radio" value="Light" name="sauce"> Light
+                <input [(ngModel)]="sauce" type="radio" value="Regular" name="sauce"> Regular
+                <input [(ngModel)]="sauce" type="radio" value="Extra" name="sauce"> Extra                
             </td>
         </tr>
         <tr>
@@ -37,32 +37,32 @@
             <th>Meats: </th>
         </tr>
         <tr>
-            <input type="checkbox" value="pepperoni" name="meats"> Pepperoni
-            <input type="checkbox" value="italianSausage" name="meats"> Italian Sausage
-            <input type="checkbox" value="bacon" name="meats"> Bacon
-            <input type="checkbox" value="meatball" name="meats"> Meatball
+            <input type="checkbox" value="Pepperoni" name="meats"> Pepperoni
+            <input type="checkbox" value="Italian Sausage" name="meats"> Italian Sausage
+            <input type="checkbox" value="Bacon" name="meats"> Bacon
+            <input type="checkbox" value="Meatball" name="meats"> Meatball
         </tr>
         <tr>
-            <input type="checkbox" value="ham" name="meats"> Ham
-            <input type="checkbox" value="beef" name="meats"> Beef
-            <input type="checkbox" value="pork" name="meats"> Pork
-            <input type="checkbox" value="chicken" name="meats"> Chicken
+            <input type="checkbox" value="Ham" name="meats"> Ham
+            <input type="checkbox" value="Beef" name="meats"> Beef
+            <input type="checkbox" value="Pork" name="meats"> Pork
+            <input type="checkbox" value="Chicken" name="meats"> Chicken
 
         </tr>
         <tr>
             <th>Veggies: </th>
         </tr>
         <tr>
-            <input type="checkbox" value="blackOlives" name="veggies"> Black Olives
-            <input type="checkbox" value="greenOlives" name="veggies"> Green Olives
-            <input type="checkbox" value="pineapple" name="veggies"> Pineapple
-            <input type="checkbox" value="onions" name="veggies"> Onions
+            <input type="checkbox" value="Black Olives" name="veggies"> Black Olives
+            <input type="checkbox" value="GreenOlives" name="veggies"> Green Olives
+            <input type="checkbox" value="Pineapple" name="veggies"> Pineapple
+            <input type="checkbox" value="Onions" name="veggies"> Onions
         </tr>
         <tr>
-            <input type="checkbox" value="mushrooms" name="veggies"> Mushrooms
-            <input type="checkbox" value="bananaPeppers" name="veggies"> Banana Peppers
-            <input type="checkbox" value="greenPeppers" name="veggies"> Green Peppers
-            <input type="checkbox" value="jalapenos" name="veggies"> Jalapenos
+            <input type="checkbox" value="Mushrooms" name="veggies"> Mushrooms
+            <input type="checkbox" value="BananaPeppers" name="veggies"> Banana Peppers
+            <input type="checkbox" value="GreenPeppers" name="veggies"> Green Peppers
+            <input type="checkbox" value="Jalapenos" name="veggies"> Jalapenos
         </tr>
         <tr>
             <th>
@@ -71,3 +71,5 @@
         </tr>
     </table>
 </form>
+
+
