@@ -9,6 +9,8 @@ import { PizzaBuilderComponent } from './main-page/pizza-builder/pizza-builder.c
 import { PizzaCardComponent } from './main-page/pizza-card/pizza-card.component';
 import { ShoppingCartCardComponent } from './main-page/shopping-cart-card/shopping-cart-card.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { ShoppingCartCardComponent } from './main-page/shopping-cart-card/shoppi
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
