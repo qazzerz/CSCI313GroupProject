@@ -3,6 +3,7 @@
 <div>
     <button type="button" class="buttonSpace" (click)="showMainPage()"> Main</button>
     <button type="button" class="buttonSpace" (click)="showDeals()"> Deals</button>
+    <button type="button" class="buttonSpace" (click)="showBuilder()"> Pizza Builder</button>
 </div>
 
 <div *ngIf = "displayCart">
@@ -10,7 +11,10 @@
 </div>
 
 <div *ngIf = "displayMain">
-    <app-pizza-card></app-pizza-card>
+    <div *ngFor="let x of lister">
+    <app-pizza-card
+    [name]="lister[0].name"></app-pizza-card>
+    </div>
 </div>
 
 <div *ngIf = "displayPizzaBuilder">
