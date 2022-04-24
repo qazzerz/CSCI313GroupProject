@@ -12,7 +12,7 @@ export class MainPageComponent implements OnInit {
   displayDeal: boolean = false;
   displayPizzaBuilder: boolean = false;
   displayCart: boolean = false;
-  x:number = 0
+  x:number = 0;
   counter: number = this.x++;
   constructor() { }
 
@@ -43,8 +43,11 @@ export class MainPageComponent implements OnInit {
     this.displayPizzaBuilder = true;
     this.displayCart = false;
   }
-  getName(x:number){
-    return this.lister[++x].name;
+  setNumber(x:number){
+    return x++;
+  }
+  getName(){
+    return this.lister[this.setNumber(this.x)].name;
   }
 
 

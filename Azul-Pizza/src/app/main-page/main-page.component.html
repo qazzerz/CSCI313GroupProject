@@ -11,9 +11,10 @@
 </div>
 
 <div *ngIf = "displayMain">
-    <div *ngFor="let x of lister">
+    <div *ngFor="let pizza of lister">
     <app-pizza-card
-    [name]="lister[0].name"></app-pizza-card>
+    [name]="pizza.name"
+    ></app-pizza-card>
     </div>
 </div>
 
