@@ -11,7 +11,8 @@ import { Pizza } from 'src/app/pizza';
 export class PizzaCardComponent implements OnInit {
 @Input() name: string = "";
 @Input() price: number = 0;
-@Input() description = "";
+@Input() description: string = "";
+@Input() url: string ="";
 
   constructor(private shopSer: ShoppingCartService) { }
 
