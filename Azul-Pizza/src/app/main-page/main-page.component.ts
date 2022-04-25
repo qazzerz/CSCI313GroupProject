@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { PREMADES } from 'src/app/premadePizzaList';
 import { Pizza } from 'src/app/pizza';
+import {ShoppingCartService} from '../shopping-cart.service'
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  styleUrls: ['./main-page.component.css'],
+  providers: [ShoppingCartService]
 })
 export class MainPageComponent implements OnInit {
   lister: Pizza[] = PREMADES;
@@ -14,7 +16,7 @@ export class MainPageComponent implements OnInit {
   displayCart: boolean = false;
   x:number = 0;
   counter: number = this.x++;
-  constructor() { }
+  constructor(private serShopping: ShoppingCartService) { }
 
   ngOnInit(): void {
   }
