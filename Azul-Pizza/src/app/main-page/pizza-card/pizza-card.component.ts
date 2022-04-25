@@ -18,5 +18,7 @@ export class PizzaCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+  addPizza(adddedPizza:Pizza){
+    this.shopSer.addPizza(adddedPizza)
+  }
 }
