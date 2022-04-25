@@ -22,6 +22,20 @@
     </div>
 </div>
 
+<div class="d-flex pizzaCardParent" *ngIf = "displayMain">
+    <div class="w-50" *ngFor="let pizza of lister">
+    <app-pizza-card
+    [name]="pizza.name"
+    [price]="pizza.price"
+    [description]="pizza.desciption"
+    [url]="pizza.img"
+    ></app-pizza-card>
+    </div>
+</div>
+
+
+
+
 <div *ngIf = "displayPizzaBuilder">
     <app-pizza-builder></app-pizza-builder>
 </div>
