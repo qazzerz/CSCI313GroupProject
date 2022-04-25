@@ -3,18 +3,20 @@ import { NgForm } from '@angular/forms';
 import { Pizza } from 'src/app/pizza';
 import { CustomPizza } from 'src/app/pizza';
 import { FormsModule } from '@angular/forms';
+import {ShoppingCartService} from '../../shopping-cart.service'
 
 
 @Component({
   selector: 'app-pizza-builder',
   templateUrl: './pizza-builder.component.html',
-  styleUrls: ['./pizza-builder.component.css']
+  styleUrls: ['./pizza-builder.component.css'],
+  providers:[ShoppingCartService]
 })
 export class PizzaBuilderComponent implements OnInit {
 
   
 
-  constructor() { 
+  constructor(private serShopping: ShoppingCartService) { 
     
   }
   @Input()
@@ -25,6 +27,8 @@ export class PizzaBuilderComponent implements OnInit {
     crust: string = "";
 
     custPizza = new CustomPizza();
+    customPizza: Pizza = {name: '',toppings: [''],sauce:'',
+    cheese:'',crust:'',desciption:'',price: 14,img:''}
 
 
    
@@ -38,5 +42,9 @@ pushToArray(top: string)
 
   ngOnInit(): void {
   }
+  createAddPizza(){
+    this.customPizza
+    this.serShopping.addPizza(this.customPizza)
 
+  }
 }
