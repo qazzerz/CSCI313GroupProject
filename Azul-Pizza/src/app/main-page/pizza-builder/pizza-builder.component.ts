@@ -27,7 +27,7 @@ export class PizzaBuilderComponent implements OnInit {
     crust: string = "";
 
     custPizza = new CustomPizza();
-    customPizza: Pizza = {name: '',toppings: [''],sauce:'',
+    customPizza: Pizza = {name: 'Custom Pizza',toppings: [''],sauce:'',
     cheese:'',crust:'',desciption:'',price: 14,img:''}
 
 
@@ -43,8 +43,8 @@ pushToArray(top: string)
   ngOnInit(): void {
   }
   createAddPizza(){
-    this.customPizza
+    
     this.serShopping.addPizza(this.customPizza)
-
+    console.log(this.serShopping.shoppingCartList)
   }
 }
