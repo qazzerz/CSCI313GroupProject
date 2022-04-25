@@ -8,7 +8,7 @@ import {Pizza} from './pizza'
 // to inject service into a component 
 //import {ShoppingCartService} from './shopping-cart.service'
 //and add it as a providers[ShoppingCartService] in the component section
-// constructor(private serShopping: this.ShoppingCartService) { }
+// constructor(private serShopping: ShoppingCartService) { }
 //then you can call the service methods
 export class ShoppingCartService {
   shoppingCartList: any[]=[];
@@ -22,6 +22,7 @@ export class ShoppingCartService {
   }
   addPizza(newPizza:Pizza){
     this.shoppingCartList.push(newPizza);
+    console.log(this.getCartList());
   }
   removePizza(remPizza:Pizza){
     const index = this.shoppingCartList.indexOf(remPizza, 0);

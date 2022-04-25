@@ -10,7 +10,7 @@ import {ShoppingCartService} from '../../shopping-cart.service'
   selector: 'app-pizza-builder',
   templateUrl: './pizza-builder.component.html',
   styleUrls: ['./pizza-builder.component.css'],
-  providers:[ShoppingCartService]
+  
 })
 export class PizzaBuilderComponent implements OnInit {
 
@@ -44,7 +44,7 @@ pushToArray(top: string)
   }
   createAddPizza(){
     
-    this.serShopping.addPizza(this.customPizza)
-    console.log(this.serShopping.shoppingCartList)
+    this.serShopping.addPizza(this.customPizza);
+    
   }
 }

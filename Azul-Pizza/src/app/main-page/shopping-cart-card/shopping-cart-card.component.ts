@@ -7,7 +7,7 @@ import {Pizza} from '../../pizza'
   selector: 'app-shopping-cart-card',
   templateUrl: './shopping-cart-card.component.html',
   styleUrls: ['./shopping-cart-card.component.css'],
-  providers: [ShoppingCartService]
+  
 })
 export class ShoppingCartCardComponent implements OnInit {
   cartList: any[]= [];
@@ -17,8 +17,10 @@ export class ShoppingCartCardComponent implements OnInit {
   constructor(private cartListService:ShoppingCartService) { }
 
   ngOnInit(): void {
-    this.cartList=this.cartListService.getCartList();
-    for(let l=0;l>this.cartList.length;){
+    this.cartList = this.cartListService.getCartList();
+   
+
+    for(let l=0;l>this.cartList.length;){ //gernerating subtotals
       this.AddToTotal(this.cartList[l].price);
     }
     
@@ -31,5 +33,10 @@ export class ShoppingCartCardComponent implements OnInit {
 
   AddToTotal(newNum:number){
     return (this.total = this.total + newNum);
+  }
+
+  refreshList(){
+    this.cartList = this.cartListService.getCartList();
+    
   }
 }
