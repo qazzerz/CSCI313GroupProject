@@ -9,10 +9,8 @@ import { Pizza } from 'src/app/pizza';
   styleUrls: ['./pizza-card.component.css']
 })
 export class PizzaCardComponent implements OnInit {
-@Input() name: string = "";
-@Input() price: number = 0;
-@Input() description: string = "";
-@Input() url: string ="";
+@Input() tempPizza: Pizza = {name:'',toppings: [], cheese :'',sauce: '',crust:'', img: '', price: 0, desciption:''};
+
 
   constructor(private shopSer: ShoppingCartService) { }
 

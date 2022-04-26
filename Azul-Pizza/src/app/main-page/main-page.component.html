@@ -11,13 +11,10 @@
     <app-shopping-cart-card></app-shopping-cart-card>
 </div>
 
-<div *ngIf = "displayMain">
-    <div *ngFor="let pizza of lister">
+<div class="d-flex pizzaCardParent" *ngIf = "displayMain">
+    <div class="w-30 pizzaCard" *ngFor="let pizza of lister">
     <app-pizza-card
-    [name]="pizza.name"
-    [price]="pizza.price"
-    [description]="pizza.desciption"
-    [url]="pizza.img"
+    [tempPizza]="pizza"
     ></app-pizza-card>
     </div>
 </div>
