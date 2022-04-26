@@ -1,15 +1,17 @@
 
 <button (click)="testItem()">add test item</button>
 <button (click)="refreshList()">refreshList</button>
-<div >
-    <li *ngFor = "let item of cartList">
-         <span>{{item.name}}   ${{item.price}}</span>
-    </li>
+<div class="card">
+    <div >
+        <li *ngFor = "let item of cartList">
+            <span>{{item.name}}   ${{item.price}}</span>
+        </li>
+    </div>
+    <div>
+        subtotal  {{total}}
+    </div>
+    <div>
 </div>
-<div>
-    subtotal  {{total}}
-</div>
-<div>
   <button>
       checkout
   </button>
