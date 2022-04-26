@@ -5,3 +5,10 @@ img{
 .card1 {
     display: inline-block;
 }
+button{
+    margin-top: 50px;
+}
+.sizer{
+    height: 500px;
+    width: 300px;
+}

@@ -1,16 +1,16 @@
 <div class="container">
-<div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;">
     <div class="card-body">
-        <img src= {{tempPizza.img}}>
-      <h5 class="card-title">$ {{tempPizza.price}},   {{tempPizza.name}}  </h5>
       <div class="row">
         <div class="col-sm">
-      <p class="card-subtitle mb-2 text-muted">Description: {{tempPizza.desciption}}</p>
+          <img src={{tempPizza.img}}>
+        </div>
+        <div class="col-sm">
+          <button type="button" class="btn btn-success" (click)="addPizza()"> Add </button>
+        </div>
+        <h5 class="card-title">$ {{tempPizza.price}}, {{tempPizza.name}} </h5>
+        <p class="card-subtitle mb-2 text-muted">Description: {{tempPizza.desciption}}</p>
+      </div>
     </div>
-    <div class="col-sm">
-      <button type="button" class="btn btn-success" (click)="addPizza()"> Add </button>
-    </div>
-    </div>
-    </div>
-</div>
+  </div>
 </div>
