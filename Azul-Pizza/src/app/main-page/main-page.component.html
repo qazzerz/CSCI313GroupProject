@@ -12,6 +12,8 @@
 </div>
 
 <div class="d-flex pizzaCardParent" *ngIf = "displayMain">
+    <h3 class="w-100">Featured Pies </h3>
+    
     <div class="w-30 pizzaCard" *ngFor="let pizza of lister">
     <app-pizza-card
     [tempPizza]="pizza"
