@@ -14,8 +14,7 @@ export class MainPageComponent implements OnInit {
   displayDeal: boolean = false;
   displayPizzaBuilder: boolean = false;
   displayCart: boolean = false;
-  x:number = 0;
-  counter: number = this.x++;
+  shoppingCart: string = 'https://cdn2.iconfinder.com/data/icons/shopping-cart-16/64/Shopping_Cart-01-512.png';
   constructor(private serShopping: ShoppingCartService) { }
 
   ngOnInit(): void {
@@ -45,12 +44,7 @@ export class MainPageComponent implements OnInit {
     this.displayPizzaBuilder = true;
     this.displayCart = false;
   }
-  setNumber(x:number){
-    return x++;
-  }
-  getName(){
-    return this.lister[this.setNumber(this.x)].name;
-  }
+  
 
 
 }

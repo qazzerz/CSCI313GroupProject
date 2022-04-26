@@ -4,7 +4,7 @@
     <button type="button" class="buttonSpace" (click)="showMainPage()"> Main</button>
     <button type="button" class="buttonSpace" (click)="showDeals()"> Deals</button>
     <button type="button" class="buttonSpace" (click)="showBuilder()"> Pizza Builder</button>
-    <button type="button" class="buttonSpace" (click)="showCart()"> ShoppingCart</button>
+    <button type="button" class="shoppingButton" (click)="showCart()"> <img class= 'shoppingIcon' src={{shoppingCart}}> </button>
 </div>
 
 <div *ngIf = "displayCart">

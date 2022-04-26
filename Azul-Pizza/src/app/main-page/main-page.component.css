@@ -11,3 +11,11 @@
 .pizzaCard{
   margin-bottom: 10px;
 }
+.shoppingIcon{
+  width: 25px;
+  height: 25px;
+}
+.shoppingButton{
+  float: right;
+  margin-right: 50px;
+}
