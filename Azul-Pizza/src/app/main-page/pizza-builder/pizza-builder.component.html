@@ -16,7 +16,7 @@
             <td>
                 <input [(ngModel)]="customPizza.cheese" type="radio" value="Light" name="cheese"> Light
                 <input [(ngModel)]="customPizza.cheese" type="radio" value="Regular" name="cheese"> Regular
-                <input [(ngModel)]="customPizza.cheese" type="radio" value="Rxtra" name="cheese"> Extra
+                <input [(ngModel)]="customPizza.cheese" type="radio" value="Extra" name="cheese"> Extra
             </td>
         </tr>
         <tr>
@@ -37,39 +37,49 @@
             <th>Meats: </th>
         </tr>
         <tr>
-            <input type="checkbox" value="Pepperoni" name="meats"> Pepperoni
-            <input type="checkbox" value="Italian Sausage" name="meats"> Italian Sausage
-            <input type="checkbox" value="Bacon" name="meats"> Bacon
-            <input type="checkbox" value="Meatball" name="meats"> Meatball
+            <input [(ngModel)]="pepperoni" type="checkbox" value="Pepperoni" name="meats"> Pepperoni
+            <input [(ngModel)]="italianSausage" type="checkbox" value="Italian Sausage" name="meats"> Italian Sausage
+            <input [(ngModel)]="bacon" type="checkbox" value="Bacon" name="meats"> Bacon
+            <input [(ngModel)]="meatball" type="checkbox" value="Meatball" name="meats"> Meatball
         </tr>
         <tr>
-            <input type="checkbox" value="Ham" name="meats"> Ham
-            <input type="checkbox" value="Beef" name="meats"> Beef
-            <input type="checkbox" value="Pork" name="meats"> Pork
-            <input type="checkbox" value="Chicken" name="meats"> Chicken
+            <input [(ngModel)]="ham" type="checkbox" value="Ham" name="meats"> Ham
+            <input [(ngModel)]="beef" type="checkbox" value="Beef" name="meats"> Beef
+            <input [(ngModel)]="pork" type="checkbox" value="Pork" name="meats"> Pork
+            <input [(ngModel)]="chicken" type="checkbox" value="Chicken" name="meats"> Chicken
 
         </tr>
         <tr>
             <th>Veggies: </th>
         </tr>
         <tr>
-            <input type="checkbox" value="Black Olives" name="veggies"> Black Olives
-            <input type="checkbox" value="GreenOlives" name="veggies"> Green Olives
-            <input type="checkbox" value="Pineapple" name="veggies"> Pineapple
-            <input type="checkbox" value="Onions" name="veggies"> Onions
+            <input [(ngModel)]="blackOlives" type="checkbox" value="Black Olives" name="veggies" > Black Olives
+            <input [(ngModel)]="greenOlives" type="checkbox" value="GreenOlives" name="veggies"> Green Olives
+            <input [(ngModel)]="pineapple" type="checkbox" value="Pineapple" name="veggies"> Pineapple
+            <input [(ngModel)]="onions" type="checkbox" value="Onions" name="veggies"> Onions
         </tr>
         <tr>
-            <input type="checkbox" value="Mushrooms" name="veggies"> Mushrooms
-            <input type="checkbox" value="BananaPeppers" name="veggies"> Banana Peppers
-            <input type="checkbox" value="GreenPeppers" name="veggies"> Green Peppers
-            <input type="checkbox" value="Jalapenos" name="veggies"> Jalapenos
+            <input [(ngModel)]="mushroom" type="checkbox" value="Mushrooms" name="veggies"> Mushrooms
+            <input [(ngModel)]="bananaPeppers" type="checkbox" value="BananaPeppers" name="veggies"> Banana Peppers
+            <input [(ngModel)]="greenPeppers" type="checkbox" value="GreenPeppers" name="veggies"> Green Peppers
+            <input [(ngModel)]="jalapenos" type="checkbox" value="Jalapenos" name="veggies"> Jalapenos
         </tr>
         <tr>
             <th>
-                <button type="submit" (click)="createAddPizza()">Add to Cart</button>
+                <button type="submit" (click)="onSubmit()">Add to Cart</button>
             </th>
         </tr>
     </table>
 </form>
+
+
+
+
+
+
+
+
+
+
 
 
