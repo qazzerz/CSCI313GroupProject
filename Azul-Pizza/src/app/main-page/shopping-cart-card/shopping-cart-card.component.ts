@@ -20,23 +20,16 @@ export class ShoppingCartCardComponent implements OnInit {
     this.cartList = this.cartListService.getCartList();
    
 
-    for(let l=0;l>this.cartList.length;){ //gernerating subtotals
+    for(let l=0;l<this.cartList.length;l++){ //gernerating subtotals
       this.AddToTotal(this.cartList[l].price);
     }
     
   }
-  testItem(){
-    this.cartListService.addPizza(this.testaddItem[1]);
-    this.AddToTotal(this.testaddItem[1].price.valueOf());
-    
-  }
+ 
 
   AddToTotal(newNum:number){
     return (this.total = this.total + newNum);
   }
 
-  refreshList(){
-    this.cartList = this.cartListService.getCartList();
-    
-  }
+ 
 }
