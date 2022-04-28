@@ -17,9 +17,7 @@ export class PizzaBuilderComponent implements OnInit {
 
   
 
-  constructor(private serShopping: ShoppingCartService) { 
-    
-  }
+  constructor(private shopSer: ShoppingCartService) { }
   @Input()
     toppings: string[] = [];
 
@@ -123,6 +121,7 @@ export class PizzaBuilderComponent implements OnInit {
     this.customPizza.crust = this.crust;
     this.customPizza.sauce = this.sauce;
     
+    this.shopSer.addPizza(this.customPizza);
   }
 
 
@@ -130,9 +129,5 @@ export class PizzaBuilderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  createAddPizza(){
-    
-    this.serShopping.addPizza(this.customPizza);
-    
-  }
+ 
 }
