@@ -12,6 +12,8 @@ import {Pizza} from '../../pizza'
 export class ShoppingCartCardComponent implements OnInit {
   cartList: any[]= [];
   testaddItem:Pizza []= PREMADES;
+  subtotal:number=0;
+  tax:number=0;
   total:number=0;
 
   constructor(private cartListService:ShoppingCartService) { }
@@ -28,7 +30,9 @@ export class ShoppingCartCardComponent implements OnInit {
  
 
   AddToTotal(newNum:number){
-    return (this.total = this.total + newNum);
+    (this.subtotal = this.subtotal + newNum);
+    (this.tax = 1*this.cartList.length);
+    this.total= this.tax + this.subtotal;
   }
 
  

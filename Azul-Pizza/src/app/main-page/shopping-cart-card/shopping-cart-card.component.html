@@ -1,18 +1,25 @@
-
-<div class="card">
-    <div >
-        <li *ngFor = "let item of cartList">
-            <span>{{item.name}}   ${{item.price}}</span>
-        </li>
+<div class="list">
+    <div class="card" style="width: 25rem;">
+        <div >
+            <li *ngFor = "let item of cartList">
+                <span>{{item.name}}   ${{item.price}}</span>
+            </li>
+        </div>
+        <div>subtotal  {{subtotal}} </div>
     </div>
-    <div>
-        subtotal  {{total}}
-    </div>
-    <div>
 </div>
-  <button>
-      checkout
-  </button>
+
+<div>
+    <div class ="checkout">
+        <div class ="card" style="width: 15rem;"> 
+            <div> subotal   ${{subtotal}}</div>
+            <div> tax   ${{tax}}</div>
+            <div> total     ${{total}}</div>
+        
+            <button> checkout</button>
+        </div>
+         
+     </div>
 </div>
 
    
