@@ -40,9 +40,9 @@ export class PizzaBuilderComponent implements OnInit {
     greenPeppers: boolean = false;
     jalapenos: boolean = false;
 
-    sauce: string = "";
-    cheese: string = "";
-    crust: string = "";
+    sauce: string = "Regular";
+    cheese: string = "Regular";
+    crust: string = "Hand Tossed";
     //custPizza = new CustomPizza();
     customPizza: Pizza = {name: 'Custom Pizza: ',toppings: [''],sauce:'',
     cheese:'',crust:'',desciption:'',price: 12,img:''}
