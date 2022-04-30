@@ -44,9 +44,9 @@ export class PizzaBuilderComponent implements OnInit {
     cheese: string = "";
     crust: string = "";
     //custPizza = new CustomPizza();
-    customPizza: Pizza = {name: 'Custom Pizza',toppings: [''],sauce:'',
-    cheese:'',crust:'',desciption:'',price: 14,img:''}
-
+    customPizza: Pizza = {name: 'Custom Pizza: ',toppings: [''],sauce:'',
+    cheese:'',crust:'',desciption:'',price: 12,img:''}
+    
     
     
     
@@ -117,11 +117,20 @@ export class PizzaBuilderComponent implements OnInit {
     }
 
     this.customPizza.toppings = this.toppings;
-    this.customPizza.cheese = this.cheese;
-    this.customPizza.crust = this.crust;
-    this.customPizza.sauce = this.sauce;
+
+    this.customPizza.price += this.toppings.length;
     
+    this.customPizza.name += "Crust: " + this.customPizza.crust + ", Sauce: " + this.customPizza.sauce + ", Cheese:  " + this.customPizza.cheese;
+    
+    if(this.toppings.length != 0){
+      this.customPizza.name += ", Toppings:"
+    }
+    for(let topping of this.toppings){
+      this.customPizza.name += " " + topping
+    } 
+
     this.shopSer.addPizza(this.customPizza);
+
   }
 
 
