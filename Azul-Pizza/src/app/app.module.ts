@@ -10,7 +10,10 @@ import { PizzaCardComponent } from './main-page/pizza-card/pizza-card.component'
 import { ShoppingCartCardComponent } from './main-page/shopping-cart-card/shopping-cart-card.component';
 
 import { FormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +27,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

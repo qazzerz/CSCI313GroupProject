@@ -6,7 +6,8 @@ import { FormsModule } from '@angular/forms';
 import {ShoppingCartService} from '../../shopping-cart.service'
 import { Variable } from '@angular/compiler/src/render3/r3_ast';
 import { newArray } from '@angular/compiler/src/util';
-
+import {MatButtonToggleModule, MatButtonToggle} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-pizza-builder',
