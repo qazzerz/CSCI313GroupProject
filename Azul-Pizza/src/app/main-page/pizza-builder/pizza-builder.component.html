@@ -7,9 +7,8 @@
             <th>Crust:</th>
         </tr>
         <tr>
-            <td>                
-                <mat-button-toggle-group [(ngModel)]="customPizza.crust" name="crust"
-                    aria-label="crust">
+            <td>
+                <mat-button-toggle-group [(ngModel)]="customPizza.crust" name="crust" aria-label="crust">
                     <mat-button-toggle value="Hand Tossed">Hand Tossed</mat-button-toggle>
                     <mat-button-toggle value="Pan">Light</mat-button-toggle>
                 </mat-button-toggle-group>
@@ -20,8 +19,7 @@
         </tr>
         <tr>
             <td>
-                <mat-button-toggle-group [(ngModel)]="customPizza.sauce" name="sauce"
-                    aria-label="sauce">
+                <mat-button-toggle-group [(ngModel)]="customPizza.sauce" name="sauce" aria-label="sauce">
                     <mat-button-toggle value="None">None</mat-button-toggle>
                     <mat-button-toggle value="Light">Light</mat-button-toggle>
                     <mat-button-toggle value="Regular">Regular</mat-button-toggle>
@@ -34,14 +32,13 @@
         </tr>
         <tr>
             <td>
-                <mat-button-toggle-group [(ngModel)]="customPizza.cheese" name="cheese"
-                    aria-label="cheese">
-                    <mat-button-toggle value="None">None</mat-button-toggle>
+                <mat-button-toggle-group [(ngModel)]="customPizza.cheese" name="cheese" aria-label="cheese">
+                    <mat-button-toggle class= "tester" value="None">None</mat-button-toggle>
                     <mat-button-toggle value="Light">Light</mat-button-toggle>
                     <mat-button-toggle value="Regular">Regular</mat-button-toggle>
                     <mat-button-toggle value="Extra">Extra</mat-button-toggle>
                 </mat-button-toggle-group>
-                
+
             </td>
         </tr>
         <tr>
@@ -51,8 +48,9 @@
             <th>Meats: </th>
         </tr>
         <tr>
+
             <input [(ngModel)]="pepperoni" type="checkbox" value="Pepperoni" name="meats"> Pepperoni
-            <input [(ngModel)]="italianSausage" type="checkbox" value="Italian Sausage" name="meats"> Italian Sausage
+            <input [(ngModel)]="italianSausage" type="checkbox" value="Italian Sausage" name="meats">  Italian Sausage
             <input [(ngModel)]="bacon" type="checkbox" value="Bacon" name="meats"> Bacon
             <input [(ngModel)]="meatball" type="checkbox" value="Meatball" name="meats"> Meatball
         </tr>
