@@ -17,7 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class PizzaBuilderComponent implements OnInit {
   types: string[] = ['None', 'Light', 'Regular', 'Extra'];
-  values: string[] = ['None', 'Light', 'Regular', 'Extra'];
+
   type: string[] = ['None', 'Light', 'Regular', 'Extra'];
   typeValues: number[] = [0,1,2,3];
 
@@ -55,6 +55,7 @@ export class PizzaBuilderComponent implements OnInit {
     
     
   onSubmit(){
+    
     if(this.pepperoni)
     {
       this.toppings.push("Pepperoni");
