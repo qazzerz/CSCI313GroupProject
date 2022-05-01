@@ -9,8 +9,10 @@
         </tr>
         <tr>
             <td>
-                <input [(ngModel)]="customPizza.crust" type="radio" value="" name="crust"> Hand Tossed
-                <input [(ngModel)]="customPizza.crust" type="radio" value="Pan" name="crust"> Pan
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input class="btn-check" [(ngModel)]="customPizza.crust" type="radio" id="btnradio2" value="" name="crust" autocomplete="off"><label class="btn btn-outline-primary" for="btnradio2"> Hand Tossed</label>
+                <input class="btn-check" [(ngModel)]="customPizza.crust" type="radio" id="btnradio2" value="Pan" name="crust"autocomplete="off"> <label class="btn btn-outline-primary" for="btnradio2">Pan</label>
+            </div>
             </td>
         </tr>
         <tr>
@@ -18,6 +20,24 @@
         </tr>
         <tr>
             <td>
+                <div class="btn-group" role="group" aria-label="Basic button toggle button group">
+                    <input class="btn-check" [(ngModel)]="customPizza.sauce" type="button" id="btnradio2" value="None" name="sauce" autocomplete="off">
+                     <label class="btn btn-outline-primary" for="btnradio2"> None </label>
+
+                     <input class="btn-check" [(ngModel)]="customPizza.sauce" type="radio" id="btnradio2" value="Light" name="sauce" autocomplete="off">
+                     <label class="btn btn-outline-primary" for="btnradio2"> Light </label>
+
+                     <input class="btn-check" [(ngModel)]="customPizza.sauce" type="radio" id="btnradio2" value="Regular" name="sauce" autocomplete="off">
+                     <label class="btn btn-outline-primary" for="btnradio2"> Regular </label>
+
+                     <input class="btn-check" [(ngModel)]="customPizza.sauce" type="radio" id="btnradio2" value="Extra" name="sauce" autocomplete="off">
+                     <label class="btn btn-outline-primary" for="btnradio2"> Extra </label>
+                </div>
+
+                
+
+
+
                 <input [(ngModel)]="customPizza.sauce" type="radio" value="None" name="sauce"> None
                 <input [(ngModel)]="customPizza.sauce" type="radio" value="Light" name="sauce"> Light
                 <input [(ngModel)]="customPizza.sauce" type="radio" value="" name="sauce"> Regular

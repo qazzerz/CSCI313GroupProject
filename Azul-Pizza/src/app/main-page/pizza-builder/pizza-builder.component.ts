@@ -5,6 +5,7 @@ import { CustomPizza } from 'src/app/pizza';
 import { FormsModule } from '@angular/forms';
 import {ShoppingCartService} from '../../shopping-cart.service'
 import { Variable } from '@angular/compiler/src/render3/r3_ast';
+import { newArray } from '@angular/compiler/src/util';
 
 
 @Component({
@@ -14,8 +15,10 @@ import { Variable } from '@angular/compiler/src/render3/r3_ast';
   
 })
 export class PizzaBuilderComponent implements OnInit {
-
-  
+  types: string[] = ['None', 'Light', 'Regular', 'Extra'];
+  values: string[] = ['None', 'Light', 'Regular', 'Extra'];
+  type: string[] = ['None', 'Light', 'Regular', 'Extra'];
+  typeValues: number[] = [0,1,2,3];
 
   constructor(private shopSer: ShoppingCartService) { }
   @Input()
@@ -133,6 +136,9 @@ export class PizzaBuilderComponent implements OnInit {
 
   }
 
+
+
+   
 
 
 
