@@ -9,6 +9,7 @@ import { newArray } from '@angular/compiler/src/util';
 import { MatButtonToggleModule, MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { MatButtonModule } from '@angular/material/button';
 
+
 @Component({
   selector: 'app-pizza-builder',
   templateUrl: './pizza-builder.component.html',
@@ -34,6 +35,8 @@ export class PizzaBuilderComponent implements OnInit {
       address: string;
     }
   }
+actionListener:string = '';
+
   @Input()
   toppings: string[] = [];
 
@@ -162,9 +165,6 @@ export class PizzaBuilderComponent implements OnInit {
     this.shopSer.addPizza(this.customPizza);
 
   }
-
-
-
 
 
 

@@ -1,3 +1,14 @@
-mat-button-toggle{
+.mat-button-toggle1{
     background-color: white;
+
 }
+.mat-button-toggle2{
+    background-color: black;
+
+}
+.toppings{
+    width: 800px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
