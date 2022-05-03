@@ -49,64 +49,118 @@
         </tr>
         <tr>
             <div class="d-flex toppings">
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="pepperoni" type="checkbox" class="btn-check" value="Pepperoni" name="meats"
                         id="Pepperoni" autocomplete="off">
                     <label class="btn btn-outline-primary" [ngClass]= "pepperoni == true ? 'button1' : 'button2'" for="Pepperoni">Pepperoni</label>
                 </div>
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="italianSausage" type="checkbox" class="btn-check" value="Italian Sausage"
                         name="meats" id="ItalianSausage" autocomplete="off">
-                    <label class="btn btn-primary" [ngClass]= "italianSausage == true ? 'button1' : 'button2'" for="ItalianSausage">Italian Sausage</label>
+                    <label class="btn btn-outline-primary" [ngClass]= "italianSausage == true ? 'button1' : 'button2'" for="ItalianSausage">Italian Sausage</label>
                 </div>
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="bacon" type="checkbox" class="btn-check" value="Bacon" name="meats" id="Bacon"
                         autocomplete="off">
-                    <label class="btn btn-primary" [ngClass]= "bacon == true ? 'button1' : 'button2'" for="Bacon">Bacon</label>
+                    <label class="btn btn-outline-primary" [ngClass]= "bacon == true ? 'button1' : 'button2'" for="Bacon">Bacon</label>
                 </div>
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="meatball" type="checkbox" class="btn-check" value="Meatball" name="meats"
                         id="Meatball" autocomplete="off">
-                    <label class="btn btn-primary" [ngClass]= "meatball == true ? 'button1' : 'button2'" for="Meatball">Meatball</label>
+                    <label class="btn btn-outline-primary" [ngClass]= "meatball == true ? 'button1' : 'button2'" for="Meatball">Meatball</label>
                 </div>
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="ham" type="checkbox" class="btn-check" value="Ham" name="meats" id="Ham"
                         autocomplete="off">
-                    <label class="btn btn-primary" [ngClass]= "ham == true ? 'button1' : 'button2'" for="Ham">Ham</label>
+                    <label class="btn btn-outline-primary" [ngClass]= "ham == true ? 'button1' : 'button2'" for="Ham">Ham</label>
                 </div>
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="beef" type="checkbox" class="btn-check" value="Beef" name="meats" id="Beef"
                         autocomplete="off">
-                    <label class="btn btn-primary" [ngClass]= "beef == true ? 'button1' : 'button2'" for="Beef">Beef</label>
+                    <label class="btn btn-outline-primary" [ngClass]= "beef == true ? 'button1' : 'button2'" for="Beef">Beef</label>
                 </div>
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="pork" type="checkbox" class="btn-check" value="Pork" name="meats" id="Pork"
                         autocomplete="off">
-                    <label class="btn btn-primary" [ngClass]= "pork == true ? 'button1' : 'button2'" for="Pork">Pork</label>
+                    <label class="btn btn-outline-primary" [ngClass]= "pork == true ? 'button1' : 'button2'" for="Pork">Pork</label>
                 </div>
-                <div class="w-100">
+                <div class="w-200">
                     <input [(ngModel)]="chicken" type="checkbox" class="btn-check" value="Chicken" name="meats"
                         id="Chicken" autocomplete="off">
-                    <label class="btn btn-primary" [ngClass]= "chicken == true ? 'button1' : 'button2'" for="Chicken">Chicken</label>
+                    <label class="btn btn-outline-primary" [ngClass]= "chicken == true ? 'button1' : 'button2'" for="Chicken">Chicken</label>
                 </div>
             </div>
 
         </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <tr>
             <th>Veggies: </th>
         </tr>
         <tr>
-            <input [(ngModel)]="blackOlives" type="checkbox" value="Black Olives" name="veggies"> Black Olives
-            <input [(ngModel)]="greenOlives" type="checkbox" value="GreenOlives" name="veggies"> Green Olives
-            <input [(ngModel)]="pineapple" type="checkbox" value="Pineapple" name="veggies"> Pineapple
-            <input [(ngModel)]="onions" type="checkbox" value="Onions" name="veggies"> Onions
-        </tr>
-        <tr>
-            <input [(ngModel)]="mushroom" type="checkbox" value="Mushrooms" name="veggies"> Mushrooms
-            <input [(ngModel)]="bananaPeppers" type="checkbox" value="BananaPeppers" name="veggies"> Banana Peppers
-            <input [(ngModel)]="greenPeppers" type="checkbox" value="GreenPeppers" name="veggies"> Green Peppers
-            <input [(ngModel)]="jalapenos" type="checkbox" value="Jalapenos" name="veggies"> Jalapenos
-        </tr>
+            <div class="d-flex toppings">
+                <div class="w-200">
+                    <input [(ngModel)]="blackOlives" type="checkbox" class="btn-check" value="Black Olives" name="veggies"
+                        id="BlackOlives" autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "blackOlives == true ? 'button1' : 'button2'" for="BlackOlives">Black Olives</label>
+                </div>
+                <div class="w-200">
+                    <input [(ngModel)]="greenOlives" type="checkbox" class="btn-check" value="Green Olives" name="veggies"
+                        id="GreenOlives" autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "greenOlives == true ? 'button1' : 'button2'" for="GreenOlives">Green Olives</label>
+                </div>
+               
+                <div class="w-200">
+                    <input [(ngModel)]="pineapple" type="checkbox" class="btn-check" value="Pineapple" name="veggies" id="Pineapple"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "pineapple == true ? 'button1' : 'button2'" for="Pineapple">Pineapple</label>
+                </div>
+                <div class="w-200">
+                    <input [(ngModel)]="onions" type="checkbox" class="btn-check" value="Onions" name="veggies"
+                        id="Onions" autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "onions == true ? 'button1' : 'button2'" for="Onions">Onions</label>
+                </div>
+                <div class="w-200">
+                    <input [(ngModel)]="mushroom" type="checkbox" class="btn-check" value="Mushrooms" name="veggies" id="Mushrooms"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "mushroom == true ? 'button1' : 'button2'" for="Mushrooms">Mushrooms</label>
+                </div>
+                <div class="w-200">
+                    <input [(ngModel)]="bananaPeppers" type="checkbox" class="btn-check" value="Banana Peppers" name="veggies" id="BananaPeppers"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "bananaPeppers== true ? 'button1' : 'button2'" for="BananaPeppers">Banana Peppers</label>
+                </div>
+                <div class="w-200">
+                    <input [(ngModel)]="greenPeppers" type="checkbox" class="btn-check" value="GreenPeppers" name="veggies" id="GreenPeppers"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "greenPeppers== true ? 'button1' : 'button2'" for="GreenPeppers">Green Peppers</label>
+                </div>
+                <div class="w-200">
+                    <input [(ngModel)]="jalapenos" type="checkbox" class="btn-check" value="Jalapenos" name="veggies"
+                        id="Jalapenos" autocomplete="off">
+                    <label class="btn btn-outline-primary" [ngClass]= "jalapenos == true ? 'button1' : 'button2'" for="Jalapenos">Jalapenos</label>
+                </div>
+            </div>
+
+
+
         <tr>
             <th>
                 <button type="submit" (click)="onSubmit()">Add to Cart</button>
