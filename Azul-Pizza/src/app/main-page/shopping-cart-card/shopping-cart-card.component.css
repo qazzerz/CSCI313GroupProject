@@ -5,8 +5,32 @@
     
 
 }
-.list{
+.cardpostion{
     position:absolute;
     top:8em;
     left:2em;
+}
+.list{
+    margin: 2em;
+}
+li{
+    display:block;
+}
+.subtotal{
+    margin-left: 75%;
+    margin-bottom: 1em;
+}
+.checkoutBox{
+    margin-top: 1em;
+    margin-left: 3em;
+    line-height: 2em;
+    margin-bottom: 3em;
+}
+.title{
+    margin: .5em;
+    font-size:xx-large;
+    
+}
+p{
+    margin-left: .5em;
 }
