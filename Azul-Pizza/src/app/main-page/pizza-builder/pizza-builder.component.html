@@ -168,3 +168,11 @@
         </tr>
     </table>
 </form>
+
+
+
+
+    <div class="modal-container" *ngIf="tooManyToppings">
+      <h1>Error: too many toppings selected. Please select 5 or less</h1>
+      <button (click)="closeModal()">Close</button>
+    </div>

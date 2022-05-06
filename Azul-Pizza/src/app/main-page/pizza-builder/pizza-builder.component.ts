@@ -68,6 +68,14 @@ actionListener:string = '';
     cheese: '', crust: '', desciption: '', price: 12, img: '',fanFav: false
   }
 
+  tooManyToppings = false;
+openSortingModal(){
+  this.tooManyToppings = true;
+  console.log('clicked')
+}
+closeModal(){
+ this.tooManyToppings = false;
+}
 
 
   buttonToggler(temp: MatButtonToggleGroup) {
@@ -162,7 +170,18 @@ actionListener:string = '';
       this.customPizza.name += " " + topping
     }
 
-    this.shopSer.addItem(this.customPizza);
+
+
+    if(this.toppings.length > 5)
+    {
+      this.tooManyToppings = true;
+      this.toppings = [];
+    }
+    else{
+      this.shopSer.addItem(this.customPizza);
+      this.toppings = [];
+    }
+    
 
   }
 
