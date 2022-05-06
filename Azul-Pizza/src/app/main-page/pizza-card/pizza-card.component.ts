@@ -9,7 +9,8 @@ import { Pizza } from 'src/app/pizza';
   styleUrls: ['./pizza-card.component.css']
 })
 export class PizzaCardComponent implements OnInit {
-@Input() tempPizza: Pizza = {name:'',toppings: [], cheese :'',sauce: '',crust:'', img: '', price: 0, desciption:''};
+@Input() tempPizza: Pizza = {name:'',toppings: [], cheese :'',sauce: ''
+,crust:'', img: '', price: 0, desciption:'',fanFav : false};
 
 
   constructor(private shopSer: ShoppingCartService) { }
@@ -17,6 +18,6 @@ export class PizzaCardComponent implements OnInit {
   ngOnInit(): void {
   }
   addPizza(){
-   this.shopSer.addPizza(this.tempPizza);
+   this.shopSer.addItem(this.tempPizza);
   }
 }

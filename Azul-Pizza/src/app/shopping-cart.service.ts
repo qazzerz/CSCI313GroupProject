@@ -20,8 +20,8 @@ export class ShoppingCartService {
   getCartLengh(){
     return this.shoppingCartList.length;
   }
-  addPizza(newPizza:Pizza){
-    this.shoppingCartList.push(newPizza);
+  addItem(newAny:any){
+    this.shoppingCartList.push(newAny);
     console.log(this.getCartList());
   }
   removePizza(remPizza:Pizza){

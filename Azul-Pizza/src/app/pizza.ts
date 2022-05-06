@@ -7,6 +7,7 @@ export interface Pizza {
     cheese: string;
     crust: string;
     img: string;
+    fanFav: boolean;
   }
 
   export class CustomPizza {

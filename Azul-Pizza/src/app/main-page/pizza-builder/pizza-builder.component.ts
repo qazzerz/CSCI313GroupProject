@@ -65,7 +65,7 @@ actionListener:string = '';
   //custPizza = new CustomPizza();
   customPizza: Pizza = {
     name: 'Custom Pizza: ', toppings: [''], sauce: '',
-    cheese: '', crust: '', desciption: '', price: 12, img: ''
+    cheese: '', crust: '', desciption: '', price: 12, img: '',fanFav: false
   }
 
 
@@ -94,7 +94,7 @@ actionListener:string = '';
       this.customPizza.name += " " + topping
     }
 
-    this.shopSer.addPizza(this.customPizza);
+    this.shopSer.addItem(this.customPizza);
   }
 
 
@@ -162,7 +162,7 @@ actionListener:string = '';
       this.customPizza.name += " " + topping
     }
 
-    this.shopSer.addPizza(this.customPizza);
+    this.shopSer.addItem(this.customPizza);
 
   }
 
