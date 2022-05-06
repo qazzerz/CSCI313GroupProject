@@ -34,6 +34,12 @@ export class ShoppingCartCardComponent implements OnInit {
     (this.tax = 1*this.cartList.length);
     this.total= this.tax + this.subtotal;
   }
+  removeItem(remItem:any){
+    this.subtotal = this.subtotal - remItem.price;
+    this.total = this.total - remItem.price;
+    this.cartListService.removeItem(remItem);
+    this.tax = this.tax -1;
 
+  }
  
 }

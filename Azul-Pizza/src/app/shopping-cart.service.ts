@@ -24,7 +24,7 @@ export class ShoppingCartService {
     this.shoppingCartList.push(newAny);
     console.log(this.getCartList());
   }
-  removePizza(remPizza:Pizza){
+  removeItem(remPizza:Pizza){
     const index = this.shoppingCartList.indexOf(remPizza, 0);
       if (index > -1) {
         this.shoppingCartList.splice(index, 1);

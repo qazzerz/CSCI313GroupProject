@@ -5,6 +5,7 @@
             <li *ngFor = "let item of cartList">
                 <span>{{item.name}}   ${{item.price}}</span>
                 <p>  Desciption: {{item.desciption}}</p>
+                <button (click)="removeItem(item)">Remove item</button>
             </li>
         </div>
         <div class="subtotal">subtotal:  ${{subtotal}} </div>
