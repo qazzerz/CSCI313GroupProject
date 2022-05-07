@@ -36,10 +36,7 @@
 <div *ngIf="displayDeal">
     <!-- Will need some condition to show pizzas under $10 -->
     <div>
-        <app-bundle *ngFor="let pizza of lister, let x of lister" 
-        [tempPizzaPrice]="x.price"
-        [tempPizza]="pizza"
-        ></app-bundle>
+        <app-bundle></app-bundle>
     </div>
     <app-bundle></app-bundle>
 </div>

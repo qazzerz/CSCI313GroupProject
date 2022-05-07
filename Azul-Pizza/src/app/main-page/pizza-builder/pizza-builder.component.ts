@@ -64,7 +64,7 @@ actionListener:string = '';
   crust: string = "Hand Tossed";
   //custPizza = new CustomPizza();
   customPizza: Pizza = {
-    name: 'Custom Pizza: ', toppings: [''], sauce: '',
+    id: 0, name: 'Custom Pizza: ', toppings: [''], sauce: '',
     cheese: '', crust: '', desciption: '', price: 12, img: '',fanFav: false
   }
 
