@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container d-flex">
+<div class="container w-30">
     <div class="card" style="width: 18rem;">
         <div class="card-body">           
             <h5 class="card-header">Pizza and Pop: </h5>
@@ -13,13 +14,13 @@
                     <img src={{tempPizza.img}}>
                 </div>
                 <div class="col-sm">
-                    <button type="button" class="btn btn-success" (click)="addPizza()"> Add </button>
+                    <button type="button" class="btn btn-success" (click)="addPizzaPop()"> Add </button>
                 </div>
                 <h5 class="card-title">$ {{pricedOut}}, {{tempPizza.name}} </h5>
                 <p class="card-subtitle mb-2 text-muted">Description: {{tempPizza.desciption}}</p>
                 <label for="popChoice">Choose a Pop: </label>
-                <select name="popChoice" id="popChoice" [(ngModel)] = 'updatedPriceValue' (change)="updatePrice()">
-                    <option [value]="pop.price" *ngFor="let pop of otherMenu">
+                <select name="popChoice" id="popChoice" [(ngModel)] = 'updatedSinglePriceId' (change)="updatePrice()">
+                    <option [value]="pop.id" *ngFor="let pop of otherMenu">
                         {{pop.name}}
                     </option>
                 </select>
@@ -28,7 +29,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container w-30">
     <div class="card" style="width: 18rem;">
         <div class="card-body">           
             <h5 class="card-header">2 Pizzas and Pop: </h5>
@@ -49,18 +50,19 @@
                     <img src={{tempPizzaDoubleList[0].img}}>
                 </div>
                 <div class="col-sm">
-                    <button type="button" class="btn btn-success" (click)="addPizza()"> Add </button>
+                    <button type="button" class="btn btn-success" (click)="addDoublePizza()"> Add </button>
                 </div>
                 <h5 class="card-title">$ {{pricedOutDouble}}, {{tempPizzaDoubleList[0].name}}, {{tempPizzaDoubleList[1].name}}  </h5>
                 <p class="card-subtitle mb-2 text-muted">{{tempPizzaDoubleList[0].name}} Description: {{tempPizzaDoubleList[0].desciption}} <br> <br>
                     {{tempPizzaDoubleList[1].name}} {{tempPizzaDoubleList[1].desciption}}</p>
-                <label for="popChoice">Choose a Pop: </label>
-                <select name="popChoice" id="popChoice" [(ngModel)]= 'updatedPriceValue' (change)="updatePizzaDouble()">
-                    <option [value]="pop.price" *ngFor="let pop of otherMenu">
-                        {{pop.name}}
+                <label for="doublePopChoice">Choose a Pop: </label>
+                <select name="doublePopChoice" id="doublePopChoice" [(ngModel)]= 'updatedDoublePriceId' (change)="updatePizzaDouble()">
+                    <option [value]="pops.id" *ngFor="let pops of otherMenu">
+                        {{pops.name}}
                     </option>
                 </select>
             </div>
         </div>
     </div>
+</div>
 </div>
