@@ -64,7 +64,7 @@ export class BundleComponent implements OnInit {
       this.pricedOut = +this.otherMenu[this.updatedSinglePriceId].price + +this.tempPizza.price;
     }
     addPizzaPop(){
-      var desciption: string = this.tempPizza.name + ", " + this.otherMenu[this.updatedDoublePriceId].name;
+      var desciption: string = this.tempPizza.name + ", " + this.otherMenu[this.tempPizzaId].name;
       this.shopSer.addItem({desciption: desciption , price: this.pricedOut, name: "Pizza Pop Bundle: "});
     }
     addDoublePizza(){
