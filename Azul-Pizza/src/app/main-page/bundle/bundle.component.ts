@@ -19,7 +19,7 @@ export class BundleComponent implements OnInit {
    ,crust:'', img: '', price: 0, desciption:'',fanFav : false};
   @Input() otherMenu: any[] = OTHERMENU;
   @Input() tempPizzaPrice: number = 0;
-  @Input() tempPizzaList: Pizza[] = PREMADES;
+  tempPizzaList: Pizza[] = PREMADES;
   
   updatedDoublePriceId: number = 0;
   pricedOut: number = 0;
@@ -29,6 +29,8 @@ export class BundleComponent implements OnInit {
   tempPizzaDouble2Id: number = 0;
   doublePopChoice: string = "";
   updatedSinglePriceId: number = 0;
+  pricedOutSingleTopping: number = 0;
+
     constructor(private shopSer: ShoppingCartService) { }
   
     ngOnInit(): void {
@@ -52,9 +54,12 @@ export class BundleComponent implements OnInit {
       this.pricedOutDouble = +this.otherMenu[this.updatedDoublePriceId].price + +this.tempPizzaDoubleList[0].price + +this.tempPizzaDoubleList[1].price;
       }
     }
-
+    
     updateDoublePrice(){
       this.pricedOut = +this.otherMenu[this.updatedDoublePriceId].price + +this.tempPizza.price;
+    }
+    updateSingleToppingPrice(){
+      this.pricedOutSingleTopping = +this.otherMenu[this.updatedDoublePriceId].price + +this.tempPizza.price;
     }
     updatePizza(){
       this.tempPizza = this.tempPizzaList[this.tempPizzaId];
@@ -68,6 +73,10 @@ export class BundleComponent implements OnInit {
       this.shopSer.addItem({desciption: desciption , price: this.pricedOut, name: "Pizza Pop Bundle: "});
     }
     addDoublePizza(){
+      var desciption: string = this.tempPizzaDoubleList[0].name + ", " + this.tempPizzaDoubleList[1].name + ", " + this.otherMenu[this.updatedDoublePriceId].name;
+      this.shopSer.addItem({desciption: desciption , price: this.pricedOutDouble, name: "2 Pizza Bundle: "});
+    }
+    addSingleToppingPizza(){
       var desciption: string = this.tempPizzaDoubleList[0].name + ", " + this.tempPizzaDoubleList[1].name + ", " + this.otherMenu[this.updatedDoublePriceId].name;
       this.shopSer.addItem({desciption: desciption , price: this.pricedOutDouble, name: "2 Pizza Bundle: "});
     }
