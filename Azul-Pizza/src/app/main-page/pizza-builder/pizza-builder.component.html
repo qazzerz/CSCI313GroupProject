@@ -2,13 +2,13 @@
     Base Price: $12
 </div>
 <form>
-    <table>
+    <table action="/action_page.php">
         <tr>
             <th>Crust:</th>
         </tr>
         <tr>
             <td>
-                <mat-button-toggle-group [(ngModel)]="customPizza.crust" name="crust" aria-label="crust">
+                <mat-button-toggle-group [(ngModel)]="customPizza.crust" name="crust" aria-label="crust" required>
                     <mat-button-toggle [ngClass]= "customPizza.crust == 'Hand Tossed' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Hand Tossed">Hand Tossed</mat-button-toggle>
                     <mat-button-toggle [ngClass]= "customPizza.crust == 'Pan' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Pan">Light</mat-button-toggle>
                 </mat-button-toggle-group>
@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td>
-                <mat-button-toggle-group [(ngModel)]="customPizza.sauce" name="sauce" aria-label="sauce">
+                <mat-button-toggle-group [(ngModel)]="customPizza.sauce" name="sauce" aria-label="sauce" required>
                     <mat-button-toggle [ngClass]= "customPizza.sauce == 'None' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="None">None</mat-button-toggle>
                     <mat-button-toggle [ngClass]= "customPizza.sauce == 'Light' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Light">Light</mat-button-toggle>
                     <mat-button-toggle [ngClass]= "customPizza.sauce == 'Regular' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Regular">Regular</mat-button-toggle>
@@ -32,7 +32,7 @@
         </tr>
         <tr>
             <td>
-                <mat-button-toggle-group [(ngModel)]="customPizza.cheese" name="cheese" aria-label="cheese">
+                <mat-button-toggle-group [(ngModel)]="customPizza.cheese" name="cheese" aria-label="cheese" required>
                     <mat-button-toggle [ngClass]= "customPizza.cheese == 'None' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="None">None</mat-button-toggle>
                     <mat-button-toggle [ngClass]= "customPizza.cheese == 'Light' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Light">Light</mat-button-toggle>
                     <mat-button-toggle [ngClass]= "customPizza.cheese == 'Regular' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Regular">Regular</mat-button-toggle>
