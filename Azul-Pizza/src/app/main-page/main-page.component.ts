@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PREMADES } from 'src/app/premadePizzaList';
+import { OTHERMENU } from '../OtherMenuItems';
 import { Pizza } from 'src/app/pizza';
 import {ShoppingCartService} from '../shopping-cart.service'
 
@@ -11,7 +12,9 @@ import {ShoppingCartService} from '../shopping-cart.service'
 })
 export class MainPageComponent implements OnInit {
   lister: Pizza[] = PREMADES;
+  otherMenu: any[] = OTHERMENU;
  
+
   displayMain: boolean = true;
   displayDeal: boolean = false;
   displayPizzaBuilder: boolean = false;

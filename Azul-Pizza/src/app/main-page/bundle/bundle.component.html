@@ -1,1 +1,23 @@
-<p>bundle works!</p>
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <img src={{tempPizza.img}}>
+                </div>
+                <div class="col-sm">
+                    <button type="button" class="btn btn-success" (click)="addPizza()"> Add </button>
+                </div>
+                <h5 class="card-title">$ {{tempPizza.price}}, {{tempPizza.name}} </h5>
+                <p class="card-subtitle mb-2 text-muted">Description: {{tempPizza.desciption}}</p>
+
+                <label for="popChoice">Choose a Pop: {{tempPizzaPrice}}</label>
+                <select name="popChoice" id="popChoice" [(ngModel)] = 'updatedPriceValue' (change)="updatePrice()">
+                    <option [value]="pop.price" *ngFor="let pop of otherMenu">
+                        {{pop.name}}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

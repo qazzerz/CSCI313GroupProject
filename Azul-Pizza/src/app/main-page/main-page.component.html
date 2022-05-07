@@ -30,14 +30,16 @@
 </div>
 
 <div class="pizzaCardBuilder" *ngIf="displayPizzaBuilder">
-
     <app-pizza-builder></app-pizza-builder>
 </div>
 
 <div *ngIf="displayDeal">
     <!-- Will need some condition to show pizzas under $10 -->
     <div>
-        <app-pizza-card></app-pizza-card>
+        <app-bundle *ngFor="let pizza of lister, let x of lister" 
+        [tempPizzaPrice]="x.price"
+        [tempPizza]="pizza"
+        ></app-bundle>
     </div>
     <app-bundle></app-bundle>
 </div>
