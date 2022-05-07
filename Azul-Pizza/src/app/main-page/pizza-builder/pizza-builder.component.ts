@@ -64,7 +64,7 @@ actionListener:string = '';
   crust: string = "Hand Tossed";
   //custPizza = new CustomPizza();
   customPizza: Pizza = {
-    name: 'Custom Pizza: ', toppings: [''], sauce: '',
+    name: 'Custom Pizza ', toppings: [''], sauce: '',
     cheese: '', crust: '', desciption: '', price: 12, img: '',fanFav: false
   }
 
@@ -93,13 +93,13 @@ closeModal(){
 
     this.customPizza.price += this.toppings.length;
 
-    this.customPizza.name += "Crust: " + this.customPizza.crust + ", Sauce: " + this.customPizza.sauce + ", Cheese:  " + this.customPizza.cheese;
+    this.customPizza.desciption += "Crust: " + this.customPizza.crust + ", Sauce: " + this.customPizza.sauce + ", Cheese:  " + this.customPizza.cheese;
 
     if (this.toppings.length != 0) {
-      this.customPizza.name += ", Toppings:"
+      this.customPizza.desciption += ", Toppings:"
     }
     for (let topping of this.toppings) {
-      this.customPizza.name += " " + topping
+      this.customPizza.desciption += " " + topping
     }
 
     this.shopSer.addItem(this.customPizza);
@@ -161,13 +161,13 @@ closeModal(){
 
     this.customPizza.price += this.toppings.length;
 
-    this.customPizza.name += "Crust: " + this.customPizza.crust + ", Sauce: " + this.customPizza.sauce + ", Cheese:  " + this.customPizza.cheese;
+    this.customPizza.desciption += "Crust: " + this.customPizza.crust + ", Sauce: " + this.customPizza.sauce + ", Cheese:  " + this.customPizza.cheese;
 
     if (this.toppings.length != 0) {
-      this.customPizza.name += ", Toppings:"
+      this.customPizza.desciption += ", Toppings:"
     }
     for (let topping of this.toppings) {
-      this.customPizza.name += " " + topping
+      this.customPizza.desciption += " " + topping
     }
 
 
