@@ -24,14 +24,11 @@ export class ShoppingCartCardComponent implements OnInit {
   ngOnInit(): void {
     this.cartList = this.cartListService.getCartList();
    
-
     for(let l=0;l<this.cartList.length;l++){ //gernerating subtotals
       this.AddToTotal(this.cartList[l].price);
     }
-    
   }
  
-
   AddToTotal(newNum:number){
     (this.subtotal = this.subtotal + newNum);
     (this.tax = 1*this.cartList.length);
@@ -55,22 +52,22 @@ export class ShoppingCartCardComponent implements OnInit {
   state: string = "";
   zip: string = "";
   done: boolean = false;
+
   checkout(){
     this.displayPizza = false;
     this.displayCheckout = true;
   }
+
   submit(){
     if(this.deliveryOrPickup.startsWith('D')){    
-
       this.delivery = true;
-
     }
     else{
       alert("Thank you for your purchase")
     }
   }
+
   reset(){
     alert("Thank you for your purchase")
   }
- 
 }

@@ -17,30 +17,13 @@ import { MatButtonModule } from '@angular/material/button';
 
 })
 export class PizzaBuilderComponent implements OnInit {
-  types: string[] = ['None', 'Light', 'Regular', 'Extra'];
-  meatTypes: string[] = ['Pepperoni', 'Bacon', "Italian Sausage", "Meatball", "Ham", "Beef", "Pork", "Chicken"];
 
-  type: string[] = ['None', 'Light', 'Regular', 'Extra'];
-  typeValues: number[] = [0, 1, 2, 3];
+  constructor(private shopSer: ShoppingCartService) {}
+  actionListener:string = '';
 
-  constructor(private shopSer: ShoppingCartService) {
-    class Comapny {
+  @Input()toppings: string[] = [];
 
-      constructor(name: string, address: string) {
-        this.name = name;
-        this.address = address;
-      }
-
-      name: string;
-      address: string;
-    }
-  }
-actionListener:string = '';
-
-  @Input()
-  toppings: string[] = [];
-
-
+  //Meats
   pepperoni: boolean = false;
   italianSausage: boolean = false;
   bacon: boolean = false;
@@ -50,6 +33,7 @@ actionListener:string = '';
   pork: boolean = false;
   chicken: boolean = false;
 
+  //Veggies
   blackOlives: boolean = false;
   greenOlives: boolean = false;
   pineapple: boolean = false;
@@ -59,10 +43,10 @@ actionListener:string = '';
   greenPeppers: boolean = false;
   jalapenos: boolean = false;
 
+  //Options
   sauce: string = "Regular";
   cheese: string = "Regular";
   crust: string = "Hand Tossed";
-  //custPizza = new CustomPizza();
   customPizza: Pizza = {
     id: 0, name: 'Custom Pizza: ', toppings: [''], sauce: '',
     cheese: '', crust: '', desciption: '', price: 12, img: '',fanFav: false
@@ -74,17 +58,9 @@ closeModal(){
  this.tooManyToppings = false;
 }
 
-
   buttonToggler(temp: MatButtonToggleGroup) {
- 
-    /*
-    .forEach(function (x) {
-      console.log(x);
-      this.customPizza.toppings.push(x);
-    });
-    */
+
     this.toppings.push(temp.value);
-    
 
     this.customPizza.toppings = this.toppings;
 
@@ -101,7 +77,6 @@ closeModal(){
 
     this.shopSer.addItem(this.customPizza);
   }
-
 
   onSubmit() {
 
@@ -166,9 +141,6 @@ closeModal(){
     for (let topping of this.toppings) {
       this.customPizza.name += " " + topping
     }
-
-
-
     if(this.toppings.length > 5)
     {
       this.tooManyToppings = true;
@@ -177,16 +149,9 @@ closeModal(){
     else{
       this.shopSer.addItem(this.customPizza);
       this.toppings = [];
-    }
-    
-
+    } 
   }
-
-
-
 
   ngOnInit(): void {
-
   }
-
 }

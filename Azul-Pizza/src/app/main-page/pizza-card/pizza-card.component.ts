@@ -12,7 +12,6 @@ export class PizzaCardComponent implements OnInit {
 @Input() tempPizza: Pizza = {id: 0, name:'',toppings: [], cheese :'',sauce: ''
 ,crust:'', img: '', price: 0, desciption:'',fanFav : false};
 
-
   constructor(private shopSer: ShoppingCartService) { }
 
   ngOnInit(): void {

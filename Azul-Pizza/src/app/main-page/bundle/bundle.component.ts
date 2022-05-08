@@ -13,10 +13,8 @@ import {MatSelectModule} from '@angular/material/select';
 export class BundleComponent implements OnInit {
   tempPizza: Pizza = {id: 0, name:'',toppings: [], cheese :'',sauce: ''
    ,crust:'', img: '', price: 0, desciption:'',fanFav : false};
-  tempPizzaDoubleList: Pizza[] = [{id: 0, name:'',toppings: [], cheese :'',sauce: ''
-   ,crust:'', img: '', price: 0, desciption:'',fanFav : false}];
-  tempPizza2: Pizza = {id: 0, name:'',toppings: [], cheese :'',sauce: ''
-   ,crust:'', img: '', price: 0, desciption:'',fanFav : false};
+  tempPizzaDoubleList: Pizza[] = [];
+
   
   tempPizzaList: Pizza[] = PREMADES;
   toppings: string[] = ["Pepperoni", "Bacon", "Italian Sausage", "Meatball", "Ham", "Beef", "Pork", 
