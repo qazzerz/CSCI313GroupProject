@@ -17,10 +17,12 @@ export class BundleComponent implements OnInit {
    ,crust:'', img: '', price: 0, desciption:'',fanFav : false}];
   tempPizza2: Pizza = {id: 0, name:'',toppings: [], cheese :'',sauce: ''
    ,crust:'', img: '', price: 0, desciption:'',fanFav : false};
-  @Input() otherMenu: any[] = OTHERMENU;
-  @Input() tempPizzaPrice: number = 0;
-  tempPizzaList: Pizza[] = PREMADES;
   
+  tempPizzaList: Pizza[] = PREMADES;
+  toppings: string[] = ["Pepperoni", "Bacon", "Italian Sausage", "Meatball", "Ham", "Beef", "Pork", 
+  "Chicken", 'Black Olives', 'Green Olives', 'Pineapple', 'Onions', 'Mushroom', 'BananaPeppers', 'GreenPeppers', 'Jalapenos'];
+  
+  otherMenu: any[] = OTHERMENU;
   updatedDoublePriceId: number = 0;
   pricedOut: number = 0;
   pricedOutDouble: number = 0;
@@ -39,10 +41,33 @@ export class BundleComponent implements OnInit {
       this.tempPizzaDoubleList[0] = this.tempPizzaList[0]
       this.tempPizzaDoubleList[1] = this.tempPizzaList[0]
       this.pricedOutDouble = this.tempPizzaDoubleList[0].price + this.tempPizzaDoubleList[1].price;
+      this.pricedOutSingleTopping = 12;
     }
+
     ngOnChanges(){
       
     }
+    
+    //Pizza and Pop
+    updatePizza(){
+      this.tempPizza = this.tempPizzaList[this.tempPizzaId];
+      this.pricedOut = +this.otherMenu[this.tempPizzaId].price + +this.tempPizza.price;
+    }
+
+    updatePrice(){
+      this.pricedOut = +this.otherMenu[this.updatedSinglePriceId].price + +this.tempPizza.price;
+    }
+
+    addPizzaPop(){
+      var desciption: string = this.tempPizza.name + ", " + this.otherMenu[this.tempPizzaId].name;
+      this.shopSer.addItem({desciption: desciption , price: this.pricedOut, name: "Pizza Pop Bundle: "});
+    }
+
+    //Double Pizza Card
+    updateDoublePrice(){
+      this.pricedOut = +this.otherMenu[this.updatedDoublePriceId].price + +this.tempPizza.price;
+    }
+
     updatePizzaDouble(){
       this.tempPizzaDoubleList[0] = this.tempPizzaList[this.tempPizzaDouble1Id];
       this.tempPizzaDoubleList[1] = this.tempPizzaList[this.tempPizzaDouble2Id];
@@ -54,27 +79,21 @@ export class BundleComponent implements OnInit {
       this.pricedOutDouble = +this.otherMenu[this.updatedDoublePriceId].price + +this.tempPizzaDoubleList[0].price + +this.tempPizzaDoubleList[1].price;
       }
     }
-    
-    updateDoublePrice(){
-      this.pricedOut = +this.otherMenu[this.updatedDoublePriceId].price + +this.tempPizza.price;
-    }
-    updateSingleToppingPrice(){
-      this.pricedOutSingleTopping = +this.otherMenu[this.updatedDoublePriceId].price + +this.tempPizza.price;
-    }
-    updatePizza(){
-      this.tempPizza = this.tempPizzaList[this.tempPizzaId];
-      this.pricedOut = +this.otherMenu[this.tempPizzaId].price + +this.tempPizza.price;
-    }
-    updatePrice(){
-      this.pricedOut = +this.otherMenu[this.updatedSinglePriceId].price + +this.tempPizza.price;
-    }
-    addPizzaPop(){
-      var desciption: string = this.tempPizza.name + ", " + this.otherMenu[this.tempPizzaId].name;
-      this.shopSer.addItem({desciption: desciption , price: this.pricedOut, name: "Pizza Pop Bundle: "});
-    }
+
     addDoublePizza(){
       var desciption: string = this.tempPizzaDoubleList[0].name + ", " + this.tempPizzaDoubleList[1].name + ", " + this.otherMenu[this.updatedDoublePriceId].name;
       this.shopSer.addItem({desciption: desciption , price: this.pricedOutDouble, name: "2 Pizza Bundle: "});
+    }
+
+    //Single Topping Card
+    updateSingleToppingPrice(){
+      console.log(this.updatedSinglePriceId)
+      if(this.updatedSinglePriceId == 100){
+        this.pricedOutSingleTopping = 10;
+      }
+      else{
+      this.pricedOutSingleTopping = +this.otherMenu[this.updatedSinglePriceId].price + 10;
+      }
     }
     addSingleToppingPizza(){
       var desciption: string = this.tempPizzaDoubleList[0].name + ", " + this.tempPizzaDoubleList[1].name + ", " + this.otherMenu[this.updatedDoublePriceId].name;

@@ -21,6 +21,10 @@ button{
     margin-right: 1000px;
 }
 .pizzaSingle{
-    width: 30%;
-    margin-right: 25px;
+    width: 29%;
+    margin-right: 15px;
+}
+.smallImg{
+    width: 100px;
+    height: 100px;
 }
