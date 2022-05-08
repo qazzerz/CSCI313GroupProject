@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {ShoppingCartService} from'../../shopping-cart.service';
 import {PREMADES} from '../../premadePizzaList'
 import {Pizza} from '../../pizza'
+import { MatButtonToggleModule, MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-toggle';
+import { MatFormFieldControl } from '@angular/material/form-field';
+
 
 @Component({
   selector: 'app-shopping-cart-card',
@@ -40,6 +43,34 @@ export class ShoppingCartCardComponent implements OnInit {
     this.cartListService.removeItem(remItem);
     this.tax = this.tax -1;
 
+  }
+
+  displayPizza: boolean = true;
+  displayCheckout: boolean = false;
+  cashOrCard: string = "";
+  deliveryOrPickup: string = "";
+  delivery: boolean = false;
+  address: string = "";
+  city: string = "";
+  state: string = "";
+  zip: string = "";
+  done: boolean = false;
+  checkout(){
+    this.displayPizza = false;
+    this.displayCheckout = true;
+  }
+  submit(){
+    if(this.deliveryOrPickup.startsWith('D')){    
+
+      this.delivery = true;
+
+    }
+    else{
+      alert("Thank you for your purchase")
+    }
+  }
+  reset(){
+    alert("Thank you for your purchase")
   }
  
 }

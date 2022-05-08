@@ -1,30 +1,75 @@
 <div class="title">SHOPPING CARD</div>
-<div class="cardpostion">
-    <div class="card" style="width: 45rem;">
-        <div  class ="list">
-            <li *ngFor = "let item of cartList">
-                <span>{{item.name}}   ${{item.price}}</span>
-                <p>  Desciption: {{item.desciption}}</p>
-                <button (click)="removeItem(item)">Remove item</button>
-            </li>
-        </div>
-        <div class="subtotal">subtotal:  ${{subtotal}} </div>
-    </div>
-</div>
 
-<div>
-    <div class ="checkout">
-        <div class ="card" style="width: 20rem;"> 
-            <div class ="checkoutBox">
-                <div > subotal   ${{subtotal}}</div>
-                <div> tax   ${{tax}}</div>
-                <div> total     ${{total}}</div>
-            
-                <button class="btn btn-success"> checkout</button>
+
+
+
+    <div *ngIf="!delivery">
+        <div class="cardpostion" *ngIf="!displayCheckout">
+            <div class="card" style="width: 45rem;">
+                <div  class ="list">
+                    <li *ngFor = "let item of cartList">
+                        <span>{{item.name}}   ${{item.price}}</span>
+                        <p>  Desciption: {{item.desciption}}</p>
+                        <button (click)="removeItem(item)">Remove item</button>
+                    </li>
+                </div>
+                <div class="subtotal">subtotal:  ${{subtotal}} </div>
             </div>
         </div>
-         
-     </div>
-</div>
 
-   
+
+
+
+        <form >
+        <div class="cardpostion" *ngIf="displayCheckout">
+            <div>
+                Type of Payment (to be paid upon revcieving order): <br>
+            </div>
+            <mat-button-toggle-group [(ngModel)]="cashOrCard" name="checkoutPay" aria-label="checkout" required>
+                <mat-button-toggle [ngClass]= "cashOrCard == 'Cash' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Cash">Cash</mat-button-toggle>
+                <mat-button-toggle [ngClass]= "cashOrCard == 'Card' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Card">Card</mat-button-toggle>
+            </mat-button-toggle-group> <br>
+
+            <div>
+                Delivery or Pickup? <br>
+            </div>
+
+            <mat-button-toggle-group [(ngModel)]="deliveryOrPickup" name="checkoutDelivery" aria-label="checkout" required>
+                <mat-button-toggle [ngClass]= "deliveryOrPickup == 'Delivery' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Delivery">Delivery</mat-button-toggle>
+                <mat-button-toggle [ngClass]= "deliveryOrPickup == 'Pickup' ? 'mat-button-toggle1' : 'mat-button-toggle2'" value="Pickup">Pickup</mat-button-toggle>
+            </mat-button-toggle-group><br>
+
+            <button class="btn btn-success" (click)="submit()"> Submit</button>
+        </div>
+        </form>
+    </div>
+        <div class="cardpostion" *ngIf="delivery">
+            <strong>Please Enter Address</strong>
+            <form action="/action_page.php">
+                <input type="text" id="address" name="adress" placeholder="Address"><br>
+                <input type="text" id="city" name="city" placeholder="City"><br>
+                <input type="text" id="state" name="state" placeholder="State"><br>
+                <input type="text" id="zip" name="zip" placeholder="Zip"><br>
+                <button class="btn btn-success" (click)="reset()">Submit</button>
+            </form>
+        
+        </div>
+
+
+
+
+    <div>
+        <div class ="checkout">
+            <div class ="card" style="width: 20rem;"> 
+                <div class ="checkoutBox">
+                    <div > subotal   ${{subtotal}}</div>
+                    <div> tax   ${{tax}}</div>
+                    <div> total     ${{total}}</div>
+                
+                    <button class="btn btn-success" (click)="checkout()"> checkout</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+

@@ -69,10 +69,7 @@ actionListener:string = '';
   }
 
   tooManyToppings = false;
-openSortingModal(){
-  this.tooManyToppings = true;
-  console.log('clicked')
-}
+
 closeModal(){
  this.tooManyToppings = false;
 }
