@@ -9,7 +9,7 @@ import { Pizza } from 'src/app/pizza';
   styleUrls: ['./pizza-card.component.css']
 })
 export class PizzaCardComponent implements OnInit {
-@Input() tempPizza: Pizza = {name:'',toppings: [], cheese :'',sauce: ''
+@Input() tempPizza: Pizza = {id: 0, name:'',toppings: [], cheese :'',sauce: ''
 ,crust:'', img: '', price: 0, desciption:'',fanFav : false};
 
 

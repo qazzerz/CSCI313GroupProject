@@ -33,13 +33,15 @@
     <app-pizza-builder></app-pizza-builder>
 </div>
 
-<div *ngIf="displayDeal">
+<div class="d-flex pizzaCardParent" *ngIf="displayDeal">
     <!-- Will need some condition to show pizzas under $10 -->
     <div>
-        <app-bundle *ngFor="let pizza of lister, let x of lister" 
-        [tempPizzaPrice]="x.price"
-        [tempPizza]="pizza"
-        ></app-bundle>
+        <app-bundle></app-bundle>
     </div>
-    <app-bundle></app-bundle>
+    <br><br>
+<div class="w-100 pizzaCard" *ngFor="let pizza of lister">
+    <div class="w-30" *ngIf= "pizza.fanFav == true">
+        <app-pizza-card></app-pizza-card>
+    </div>
+</div>
 </div>
