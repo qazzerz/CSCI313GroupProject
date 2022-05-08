@@ -14,9 +14,11 @@
     <h3 class="w-100">Featured Pies </h3>
 
     <div class="w-30 pizzaCard" *ngFor="let pizza of lister">
+        <div class="w-30" *ngIf= "pizza.price > 10">
         <app-pizza-card 
         [tempPizza]="pizza"
         ></app-pizza-card>
+    </div>
     </div>
     <h3 class="w-100 fanFavPizzaCardBuilder">Fan Favorites </h3>
     <div class="w-30 pizzaCard" *ngFor="let pizza of lister">
@@ -39,9 +41,12 @@
         <app-bundle></app-bundle>
     </div>
     <br><br>
-<div class="w-100 pizzaCard" *ngFor="let pizza of lister">
-    <div class="w-30" *ngIf= "pizza.fanFav == true">
-        <app-pizza-card></app-pizza-card>
+    <h3 class="w-100">$10 and under</h3>
+<div class="pizzaCard" *ngFor="let pizza of lister">
+    <div class="w-30" *ngIf= "pizza.price <= 10">
+        <app-pizza-card
+        [tempPizza]="pizza"
+        ></app-pizza-card>
     </div>
 </div>
 </div>

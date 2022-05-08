@@ -41,5 +41,19 @@ export const PREMADES: Pizza[] = [
      img: 'https://www.caseys.com/medias/sys_master/images/h40/haf/8796493512734/8133_base-400x400/8133-base-400x400.png',
      price: 12.00,desciption:
      'Includes olive, onions, spianach, greeen peppers, tomatoes',
-     fanFav: false}
-];
+     fanFav: false},
+
+     {id: 6, name:'Pepperoni',toppings: ['peperoni'],
+     cheese :'cheese',sauce: 'maranara',crust:'basic',
+     img: 'https://images.contentstack.io/v3/assets/bltbb619fd5c667ba2d/blt2094c59e43e6f946/60ce79bbe1b3f7481347ddb0/Pizza.jpg',
+     price: 10.00,desciption: 'A Classic pepperoni pizza', fanFav: false},
+
+     {id: 7, name:'Cheese',toppings: ['Mozzarella Cheese'],
+     cheese :'cheese',sauce: 'maranara',crust:'basic',
+     img: 'https://images.contentstack.io/v3/assets/bltbb619fd5c667ba2d/blt2d4e43bcebe1548e/60ca60fa1e0505677a881227/Cheese_Pizza.jpg',
+     price: 9.00,desciption: 'A Classic pepperoni pizza', fanFav: false},
+    
+     {id: 8, name:'Bread Sticks',toppings: ['Grlic Salt'],
+     cheese :'cheese',sauce: 'maranara',crust:'basic',
+     img: 'https://napolipizzalv.com/wp-content/uploads/2019/06/6-1-01.jpeg',
+     price: 5.00, desciption: 'Cheesey Bread Sticks with garlic salt and a side a marinara sauce', fanFav: true}];
