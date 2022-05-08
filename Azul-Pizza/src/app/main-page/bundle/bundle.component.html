@@ -5,7 +5,7 @@
     <div class="pizzaSingle w-30">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-header">Pizza and Pop: </h5>
+                <h2 class="display-4 centerText">Pizza and Pop </h2>
                 <label for="pizzaChoice">Choose a Pizza: </label>
                 <select name="pizzaChoice" id="pizzaChoice" [(ngModel)]='tempPizzaId' (change)="updatePizza()">
                     <option [value]="pizza.id" *ngFor="let pizza of tempPizzaList">
@@ -34,7 +34,7 @@
     <div class="pizzaSingle w-30">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-header">2 Pizzas and Pop: </h5>
+                <h2 class="display-4 centerText">2 Pizzas and Pop </h2>
                 <label for="pizzaDouble1Choice">Choose a Pizza: </label>
                 <select name="pizzaDouble1Choice" id="pizzaDouble1Choice" [(ngModel)]='tempPizzaDouble1Id'
                     (change)="updatePizzaDouble()">
@@ -76,7 +76,7 @@
         <div class="pizzaSingle w-30">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-header">1 Topping Pizza and Pop: </h5>
+                    <h2 class="display-4 centerText">1 Topping Pizza and Pop </h2>
                     <label for="pizzaSingleToppingChoice">Choose a Topping: </label>
                     <select name="pizzaSingleToppingChoice" id="pizzaSingleToppingChoice"
                         [(ngModel)]='toppingChoice' (change)="updatePizzaTopping()">
