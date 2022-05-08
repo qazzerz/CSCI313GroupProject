@@ -23,15 +23,20 @@ export class BundleComponent implements OnInit {
   "Chicken", 'Black Olives', 'Green Olives', 'Pineapple', 'Onions', 'Mushroom', 'BananaPeppers', 'GreenPeppers', 'Jalapenos'];
   
   otherMenu: any[] = OTHERMENU;
-  updatedDoublePriceId: number = 0;
+  
   pricedOut: number = 0;
-  pricedOutDouble: number = 0;
   tempPizzaId: number = 0;
+  updatedPizzaPopPriceId: number = 0;
+
   tempPizzaDouble1Id: number = 0;
   tempPizzaDouble2Id: number = 0;
+  pricedOutDouble: number = 0;
   doublePopChoice: string = "";
+  updatedDoublePriceId: number = 0;
+
   updatedSinglePriceId: number = 0;
   pricedOutSingleTopping: number = 0;
+  toppingChoice: string = "Pepperoni";
 
     constructor(private shopSer: ShoppingCartService) { }
   
@@ -55,11 +60,11 @@ export class BundleComponent implements OnInit {
     }
 
     updatePrice(){
-      this.pricedOut = +this.otherMenu[this.updatedSinglePriceId].price + +this.tempPizza.price;
+      this.pricedOut = +this.otherMenu[this.updatedPizzaPopPriceId].price + +this.tempPizza.price;
     }
 
     addPizzaPop(){
-      var desciption: string = this.tempPizza.name + ", " + this.otherMenu[this.tempPizzaId].name;
+      var desciption: string = this.tempPizza.name + ", " + this.otherMenu[this.updatedPizzaPopPriceId].name;
       this.shopSer.addItem({desciption: desciption , price: this.pricedOut, name: "Pizza Pop Bundle: "});
     }
 
@@ -81,11 +86,15 @@ export class BundleComponent implements OnInit {
     }
 
     addDoublePizza(){
-      var desciption: string = this.tempPizzaDoubleList[0].name + ", " + this.tempPizzaDoubleList[1].name + ", " + this.otherMenu[this.updatedDoublePriceId].name;
-      this.shopSer.addItem({desciption: desciption , price: this.pricedOutDouble, name: "2 Pizza Bundle: "});
+      var desciption: string = "Pizzas: " + this.tempPizzaDoubleList[0].name + ", " + this.tempPizzaDoubleList[1].name + ", " + "Beverage: " +  this.otherMenu[this.updatedDoublePriceId].name;
+      this.shopSer.addItem({desciption: desciption , price: this.pricedOutDouble, name: "2x Pizza Bundle: "});
     }
 
     //Single Topping Card
+    updatePizzaTopping(){
+
+    }
+
     updateSingleToppingPrice(){
       console.log(this.updatedSinglePriceId)
       if(this.updatedSinglePriceId == 100){
@@ -94,9 +103,11 @@ export class BundleComponent implements OnInit {
       else{
       this.pricedOutSingleTopping = +this.otherMenu[this.updatedSinglePriceId].price + 10;
       }
+      return this.pricedOutSingleTopping
     }
+
     addSingleToppingPizza(){
-      var desciption: string = this.tempPizzaDoubleList[0].name + ", " + this.tempPizzaDoubleList[1].name + ", " + this.otherMenu[this.updatedDoublePriceId].name;
-      this.shopSer.addItem({desciption: desciption , price: this.pricedOutDouble, name: "2 Pizza Bundle: "});
+      var desciption: string = "Cheese Pizza with " + this.toppingChoice + " added, " +  "Beverage: " + this.otherMenu[this.updatedSinglePriceId].name;
+      this.shopSer.addItem({desciption: desciption , price: this.pricedOutSingleTopping, name: "Single Topping Pizza: "});
     }
   }

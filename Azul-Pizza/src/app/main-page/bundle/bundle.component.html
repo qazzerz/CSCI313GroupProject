@@ -22,7 +22,7 @@
                     <h5 class="card-title">$ {{pricedOut}}, {{tempPizza.name}} </h5>
                     <p class="card-subtitle mb-2 text-muted">Description: {{tempPizza.desciption}}</p>
                     <label for="popChoice">Choose a Pop: </label>
-                    <select name="popChoice" id="popChoice" [(ngModel)]='updatedSinglePriceId' (change)="updatePrice()">
+                    <select name="popChoice" id="popChoice" [(ngModel)]='updatedPizzaPopPriceId' (change)="updatePrice()">
                         <option [value]="pop.id" *ngFor="let pop of otherMenu">
                             {{pop.name}}
                         </option>
@@ -72,13 +72,14 @@
                 </div>
             </div>
         </div>
+    </div>
         <div class="pizzaSingle w-30">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-header">1 Topping Pizza and Pop: </h5>
                     <label for="pizzaSingleToppingChoice">Choose a Topping: </label>
                     <select name="pizzaSingleToppingChoice" id="pizzaSingleToppingChoice"
-                        [(ngModel)]='tempPizzaDouble1Id' (change)="updatePizzaDouble()">
+                        [(ngModel)]='toppingChoice' (change)="updatePizzaTopping()">
                         <option [value]="topping" *ngFor="let topping of toppings">
                             {{topping}}
                         </option>
@@ -100,13 +101,9 @@
                             <option [value]="pops.id" *ngFor="let pops of otherMenu">
                                 {{pops.name}}
                             </option>
-                            <option [value]="100">
-                                No Beverage
-                            </option>
                         </select>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
