@@ -33,7 +33,7 @@ p{
     margin-left: .5em;
 }
 .card {
-    border: 15px solid orange;
+    border: 5px solid orange;
     background-color: lightblue;
     color: black;
     font-weight:500;
@@ -43,4 +43,16 @@ p{
     background-color:lightgreen;
     border: 2px solid orange;
     color: black;
+}
+input{
+    
+    background-color: lightblue;
+    border: 2px solid orange;
+    margin: 1rem;
+}
+button{
+    background-color:lightgreen;
+    border: 2px solid orange;
+    color: black;
+    margin-top: 1em;
 }

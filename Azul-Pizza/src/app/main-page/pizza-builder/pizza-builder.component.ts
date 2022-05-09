@@ -145,6 +145,7 @@ closeModal(){
     {
       this.tooManyToppings = true;
       this.toppings = [];
+      this.customPizza.name = "Custom Pizza"
     }
     else{
       this.shopSer.addItem(this.customPizza);

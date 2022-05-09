@@ -12,3 +12,9 @@ button{
     height: 500px;
     width: 300px;
 }
+.card{
+    border: 5px solid orange;
+    color: black;
+    font-weight:500;
+    font-size: large;
+}

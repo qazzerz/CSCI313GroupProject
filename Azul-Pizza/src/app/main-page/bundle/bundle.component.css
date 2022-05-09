@@ -31,3 +31,10 @@ button{
 .centerText{
     text-align: center;
 }
+
+.card{
+    border: 5px solid orange;
+    color: black;
+    font-weight:500;
+    font-size: large;
+}
