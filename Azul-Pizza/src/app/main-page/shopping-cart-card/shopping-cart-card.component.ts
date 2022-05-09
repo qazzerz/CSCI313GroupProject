@@ -73,11 +73,13 @@ export class ShoppingCartCardComponent implements OnInit {
       this.delivery = true;
     }
     else{
-      alert("Thank you for your purchase")
+      this.reset()
     }
   }
 
   reset(){
     alert("Thank you for your purchase")
+    this.cartList = []
+    this.cartListService.resetCart();
   }
 }

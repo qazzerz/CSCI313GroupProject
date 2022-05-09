@@ -30,4 +30,7 @@ export class ShoppingCartService {
         this.shoppingCartList.splice(index, 1);
       }
   }
+  resetCart(){
+    this.shoppingCartList = [];
+  }
 }
