@@ -69,7 +69,10 @@ export class ShoppingCartCardComponent implements OnInit {
   }
 
   submit(){
-    if(this.deliveryOrPickup.startsWith('D')){    
+    if(this.cashOrCard.length == 0 || this.deliveryOrPickup.length == 0){
+      alert("Error: one of the information fields is empty")
+    }
+    else if(this.deliveryOrPickup.startsWith('D')){    
       this.delivery = true;
     }
     else{
