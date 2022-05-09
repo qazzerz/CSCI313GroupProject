@@ -80,6 +80,9 @@ export class ShoppingCartCardComponent implements OnInit {
       this.displayPizza =true;
       this.displayCheckout =false;
       this.delivery =false;
+      this.subtotal = 0;
+      this.tax = 0;
+      this.total = 0;
     }
   }
 
@@ -91,5 +94,8 @@ export class ShoppingCartCardComponent implements OnInit {
     this.displayPizza =true;
     this.displayCheckout =false;
     this.delivery =false;
+    this.subtotal = 0;
+      this.tax = 0;
+      this.total = 0;
   }
 }
