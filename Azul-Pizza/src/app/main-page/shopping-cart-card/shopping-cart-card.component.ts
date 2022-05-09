@@ -15,9 +15,9 @@ import { MatFormFieldControl } from '@angular/material/form-field';
 export class ShoppingCartCardComponent implements OnInit {
   cartList: any[]= [];
   testaddItem:Pizza []= PREMADES;
-  subtotal:number=0;
-  tax:number=0;
-  total:number=0;
+  subtotal:number=0.00;
+  tax:number=0.00;
+  total:number=0.00;
   displayNoPizza: boolean = true;
   displayPizza: boolean = true;
   displayCheckout: boolean = false;
@@ -93,9 +93,9 @@ export class ShoppingCartCardComponent implements OnInit {
     this.displayPizza =true;
     this.displayCheckout =false;
     this.delivery =false;
-    this.subtotal = 0;
-      this.tax = 0;
-      this.total = 0;
+    this.subtotal = 0.00;
+      this.tax = 0.00;
+      this.total = 0.00;
     this.address ='';
     this.city = '';
     this.state  ='';
