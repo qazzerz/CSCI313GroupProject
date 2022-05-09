@@ -74,12 +74,22 @@ export class ShoppingCartCardComponent implements OnInit {
     }
     else{
       alert("Thank you for your purchase")
-      this.cartList = [];
+      while(this.cartList.length > 0){
+        this.cartList.pop();
+      }
+      this.displayPizza =true;
+      this.displayCheckout =false;
+      this.delivery =false;
     }
   }
 
   reset(){
     alert("Thank you for your purchase")
-    this.cartList = [];
+    while(this.cartList.length > 0){
+      this.cartList.pop();
+    }
+    this.displayPizza =true;
+    this.displayCheckout =false;
+    this.delivery =false;
   }
 }
