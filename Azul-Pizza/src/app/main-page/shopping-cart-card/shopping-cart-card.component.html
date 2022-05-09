@@ -5,16 +5,24 @@
 
     <div *ngIf="!delivery">
         <div class="cardpostion" *ngIf="!displayCheckout">
-            <div class="card" style="width: 45rem;">
-                <div  class ="list">
-                    <li *ngFor = "let item of cartList">
-                        <span>{{item.name}}   ${{item.price}}</span>
-                        <p>  Desciption: {{item.desciption}}</p>
-                        <button (click)="removeItem(item)">Remove item</button>
-                    </li>
+            
+                <div class="card" style="width: 35rem;">
+                    <div *ngIf="!displayNoPizza">
+                        <p>You have no pizza inside the cart </p>
+                    </div>
+                    <div  class ="list" >
+                            <li *ngFor = "let item of cartList">
+                                <span>{{item.name}}   ${{item.price}}</span>
+                                <p>  Desciption: {{item.desciption}}</p>
+                                <mat-button-toggle-group>
+                                    <mat-button-toggle (click)="removeItem(item)" value="remove">remove Item</mat-button-toggle>
+                                </mat-button-toggle-group>
+                            </li>
+                    </div>
+                    
+                    <div class="subtotal">subtotal:  ${{subtotal}} </div>
                 </div>
-                <div class="subtotal">subtotal:  ${{subtotal}} </div>
-            </div>
+           
         </div>
 
 

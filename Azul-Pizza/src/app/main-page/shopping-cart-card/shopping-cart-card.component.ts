@@ -18,30 +18,7 @@ export class ShoppingCartCardComponent implements OnInit {
   subtotal:number=0;
   tax:number=0;
   total:number=0;
-
-  constructor(private cartListService:ShoppingCartService) { }
-
-  ngOnInit(): void {
-    this.cartList = this.cartListService.getCartList();
-   
-    for(let l=0;l<this.cartList.length;l++){ //gernerating subtotals
-      this.AddToTotal(this.cartList[l].price);
-    }
-  }
- 
-  AddToTotal(newNum:number){
-    (this.subtotal = this.subtotal + newNum);
-    (this.tax = 1*this.cartList.length);
-    this.total= this.tax + this.subtotal;
-  }
-  removeItem(remItem:any){
-    this.subtotal = this.subtotal - remItem.price;
-    this.total = this.total - remItem.price;
-    this.cartListService.removeItem(remItem);
-    this.tax = this.tax -1;
-
-  }
-
+  displayNoPizza: boolean = true;
   displayPizza: boolean = true;
   displayCheckout: boolean = false;
   cashOrCard: string = "";
@@ -52,6 +29,39 @@ export class ShoppingCartCardComponent implements OnInit {
   state: string = "";
   zip: string = "";
   done: boolean = false;
+
+  constructor(private cartListService:ShoppingCartService) { }
+
+  ngOnInit(): void {
+    this.cartList = this.cartListService.getCartList();
+   this.cartLengh();
+    for(let l=0;l<this.cartList.length;l++){ //gernerating subtotals
+      this.AddToTotal(this.cartList[l].price);
+    }
+  }
+  cartLengh(){
+    if (this.cartList.length < 1){
+      this.displayNoPizza = false;
+     }
+     else{
+       this.displayNoPizza = true
+     }
+  }
+  AddToTotal(newNum:number){
+    (this.subtotal = this.subtotal + newNum);
+    (this.tax = 1*this.cartList.length);
+    this.total= this.tax + this.subtotal;
+  }
+  removeItem(remItem:any){
+    this.subtotal = this.subtotal - remItem.price;
+    this.total = this.total - remItem.price;
+    this.cartListService.removeItem(remItem);
+    this.tax = this.tax -1;
+    this.cartLengh();
+
+  }
+
+  
 
   checkout(){
     this.displayPizza = false;
