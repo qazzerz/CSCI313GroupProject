@@ -74,10 +74,12 @@ export class ShoppingCartCardComponent implements OnInit {
     }
     else{
       alert("Thank you for your purchase")
+      this.cartList = [];
     }
   }
 
   reset(){
     alert("Thank you for your purchase")
+    this.cartList = [];
   }
 }
