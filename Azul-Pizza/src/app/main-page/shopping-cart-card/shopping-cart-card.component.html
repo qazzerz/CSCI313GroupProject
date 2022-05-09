@@ -58,13 +58,13 @@
     </div>
         <div class="cardpostion" *ngIf="delivery">
             <strong>Please Enter Address</strong>
-            <form action="/action_page.php">
-                <input type="text" id="address" name="adress" placeholder="Address"><br>
-                <input type="text" id="city" name="city" placeholder="City"><br>
-                <input type="text" id="state" name="state" placeholder="State"><br>
-                <input type="text" id="zip" name="zip" placeholder="Zip"><br>
-                <button class="btn btn-success" (click)="reset()">Submit</button>
-            </form>
+            
+                <input  type="text" id="address" [(ngModel)]="address" placeholder="Address"><br>
+                <input  type="text" id="city" [(ngModel)]="city" placeholder="City"><br>
+                <input  type="text" id="state" [(ngModel)]="state" placeholder="State"><br>
+                <input  type="text" id="zip" [(ngModel)]="zip" placeholder="Zip"><br>
+                <button class="btn btn-success" (click)="submitDel()">Submit</button>
+            
         
         </div>
 

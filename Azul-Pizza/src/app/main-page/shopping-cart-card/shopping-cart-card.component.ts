@@ -76,7 +76,16 @@ export class ShoppingCartCardComponent implements OnInit {
       this.reset()
     }
   }
-
+  submitDel(){
+   
+    if (this.address != '' && this.city != ''&& this.state != '' && this.zip != ''){
+      this.reset(); //checks to see if field are empty
+    }else
+    {
+      alert("Error: one of the delivery information field is empty")
+    }
+    
+  }
   reset(){
     alert("Thank you for your purchase")
     this.cartList = []
@@ -87,5 +96,9 @@ export class ShoppingCartCardComponent implements OnInit {
     this.subtotal = 0;
       this.tax = 0;
       this.total = 0;
+    this.address ='';
+    this.city = '';
+    this.state  ='';
+    this.zip ='';
   }
 }
