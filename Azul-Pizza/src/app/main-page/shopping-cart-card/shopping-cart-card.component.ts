@@ -81,5 +81,11 @@ export class ShoppingCartCardComponent implements OnInit {
     alert("Thank you for your purchase")
     this.cartList = []
     this.cartListService.resetCart();
+    this.displayPizza =true;
+    this.displayCheckout =false;
+    this.delivery =false;
+    this.subtotal = 0;
+      this.tax = 0;
+      this.total = 0;
   }
 }

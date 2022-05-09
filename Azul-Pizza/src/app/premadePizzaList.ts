@@ -51,7 +51,7 @@ export const PREMADES: Pizza[] = [
      {id: 7, name:'Cheese',toppings: ['Mozzarella Cheese'],
      cheese :'cheese',sauce: 'maranara',crust:'basic',
      img: 'https://images.contentstack.io/v3/assets/bltbb619fd5c667ba2d/blt2d4e43bcebe1548e/60ca60fa1e0505677a881227/Cheese_Pizza.jpg',
-     price: 9.00,desciption: 'A Classic pepperoni pizza', fanFav: false},
+     price: 9.00,desciption: 'A Classic cheese pizza', fanFav: false},
     
      {id: 8, name:'Bread Sticks',toppings: ['Grlic Salt'],
      cheese :'cheese',sauce: 'maranara',crust:'basic',
