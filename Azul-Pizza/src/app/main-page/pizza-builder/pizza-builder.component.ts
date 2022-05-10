@@ -154,5 +154,8 @@ closeModal(){
   }
 
   ngOnInit(): void {
+    this.customPizza.crust = "Hand Tossed";
+    this.customPizza.cheese = "Regular";
+    this.customPizza.sauce = "Regular";
   }
 }

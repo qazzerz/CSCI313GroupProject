@@ -44,7 +44,7 @@ export class BundleComponent implements OnInit {
       this.tempPizzaDoubleList[0] = this.tempPizzaList[0]
       this.tempPizzaDoubleList[1] = this.tempPizzaList[0]
       this.pricedOutDouble = this.tempPizzaDoubleList[0].price + this.tempPizzaDoubleList[1].price;
-      this.pricedOutSingleTopping = 12;
+      this.pricedOutSingleTopping = 10;
     }
 
     ngOnChanges(){
