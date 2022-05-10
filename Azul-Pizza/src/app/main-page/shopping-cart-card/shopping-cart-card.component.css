@@ -55,3 +55,15 @@ button{
     color: black;
     margin-top: 1em;
 }
+.mat-button-toggle1{
+    background-color:blue;
+    border: 1px solid darkblue;
+    color: black;
+
+}
+.mat-button-toggle2{
+    background-color:lightgreen;
+    border: 1px solid darkblue;
+    color: black;
+
+}
