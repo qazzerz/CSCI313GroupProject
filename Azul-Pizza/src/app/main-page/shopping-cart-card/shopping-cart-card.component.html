@@ -25,7 +25,7 @@
                             </li>
                     </div>
                     
-                    <div class="subtotal">subtotal:  ${{subtotal}}.00 </div>
+                    <div class="subtotal">subtotal:  ${{subtotal | number : '.2-2'}} </div>
                 </div>
            
         </div>
@@ -75,9 +75,9 @@
         <div class ="checkout">
             <div class ="card" style="width: 20rem;"> 
                 <div class ="checkoutBox">
-                    <div > subotal   ${{subtotal}}.00</div>
-                    <div> tax   ${{tax}}.00</div>
-                    <div> total     ${{total}}.00</div>
+                    <div > subotal   ${{subtotal | number : '.2-2'}}</div>
+                    <div> tax   ${{tax | number : '.2-2'}}</div>
+                    <div> total     ${{total | number : '.2-2'}}</div>
                 
                     <button class="btn btn-success" (click)="checkout()"> checkout</button>
                 </div>
