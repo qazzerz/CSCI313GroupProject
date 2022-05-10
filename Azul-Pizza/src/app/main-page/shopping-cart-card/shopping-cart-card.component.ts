@@ -88,7 +88,12 @@ export class ShoppingCartCardComponent implements OnInit {
     
   }
   reset(){
-    alert("Thank you for your purchase")
+    if(this.deliveryOrPickup.startsWith('D')){
+    alert("Thank you for your purchase, your pizza will be delivered in about 45 minutes")
+    }
+    else{
+      alert("Thank you for your purchase, your pizza will be ready for pickup in about 15 minutes")
+    }
     this.cartList = []
     this.cartListService.resetCart();
     this.displayPizza =true;
