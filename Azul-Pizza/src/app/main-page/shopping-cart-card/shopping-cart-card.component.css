@@ -65,3 +65,9 @@ button{
     border: 1px solid darkblue;
     color: black;
 }
+.buttonR{
+    margin-bottom: 1em;
+    background-color:lightgreen;
+    border: 1px solid darkblue;
+    color: black;
+}
