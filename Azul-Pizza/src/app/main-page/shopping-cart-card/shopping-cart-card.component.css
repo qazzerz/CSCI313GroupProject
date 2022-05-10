@@ -1,6 +1,6 @@
 .checkout{
     position:fixed;
-    top:8em;
+    top:9em;
     left:58%;
 }
 .cardpostion{
@@ -36,7 +36,7 @@ p{
     margin-left: .5em;
 }
 .card {
-    border: 5px solid orange;
+    border: 2px solid darkblue;
     background-color: lightblue;
     color: black;
     font-weight:500;
@@ -44,18 +44,18 @@ p{
 }
 .mat-button-toggle-appearance-standard{
     background-color:lightgreen;
-    border: 2px solid orange;
+    border: 2px solid darkblue;
     color: black;
 }
 input{
     
     background-color: lightblue;
-    border: 2px solid orange;
+    border: 2px solid darkblue;
     margin: 1rem;
 }
 button{
     background-color:lightgreen;
-    border: 2px solid orange;
+    border: 2px solid darkblue;
     color: black;
     margin-top: 1em;
 }

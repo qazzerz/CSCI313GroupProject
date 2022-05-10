@@ -12,6 +12,7 @@ import {Pizza} from './pizza'
 //then you can call the service methods
 export class ShoppingCartService {
   shoppingCartList: any[]=[];
+  total: number =0.00;
   constructor() { }
 
   getCartList(){
@@ -23,12 +24,21 @@ export class ShoppingCartService {
   addItem(newAny:any){
     this.shoppingCartList.push(newAny);
     console.log(this.getCartList());
+    this.getCartPrice();
+  }
+  getCartPrice(){
+    for(let l=0;l<this.shoppingCartList.length;l++){ //gernerating subtotals
+      this.total = this.total + (this.shoppingCartList[l].price);
+    }
+    return this.total
   }
   removeItem(remPizza:Pizza){
     const index = this.shoppingCartList.indexOf(remPizza, 0);
       if (index > -1) {
         this.shoppingCartList.splice(index, 1);
+        
       }
+      this.getCartPrice();
   }
   resetCart(){
     this.shoppingCartList = [];

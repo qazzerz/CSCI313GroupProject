@@ -16,8 +16,22 @@
 }
 
 .button2{
-    background:aqua
+    background-color:lightgreen;
+    border: 1px solid darkblue;
+    color: black;
 }
 input[type="checkbox"] {
     opacity: 0;
+}
+.mat-button-toggle-appearance-standard{
+    background-color:lightgreen;
+    border: 1px solid darkblue;
+    color: black;
+
+}
+button{
+    background-color:lightgreen;
+    border: 1px solid darkblue;
+    color: black;
+    margin-top: 1em;
 }
