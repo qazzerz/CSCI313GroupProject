@@ -16,13 +16,11 @@
   height: 50px;
 }
 .shoppingButton{
-  position: absolute;
   left: 50%;
   top: .001%;
   float: right;
   margin-right: 50px;
   border: none;
- 
   
 }
 
@@ -50,8 +48,7 @@
 .buttonGroup{
   width: 1000px;
   margin-top: 20px;
-  margin-bottom: 30px;
-  margin-left: 100px;
-  position: absolute;
+  margin-bottom: 25px;
+  margin-left: 30%;
   left: 30%;
 }
