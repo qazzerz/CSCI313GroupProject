@@ -30,7 +30,6 @@ li{
     font-size:xx-large;
     left: 50%;
     width: max-content;
-    
 }
 p{
     margin-left: .5em;
@@ -42,7 +41,6 @@ p{
     font-weight:500;
     font-size: large;
 }
-
 input{
     background-color: lightblue;
     border: 2px solid darkblue;
@@ -55,7 +53,6 @@ button{
     margin-top: 1em;
 }
 .mat-button-toggle1{
-    margin: 5px;
     background-color:blue;
     border: 1px solid darkblue;
     color: black;
@@ -66,7 +63,6 @@ button{
     color: black;
 }
 .buttonR{
-  
     background-color:lightgreen;
     border: 1px solid darkblue;
     color: black;
