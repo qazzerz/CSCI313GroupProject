@@ -49,7 +49,7 @@ export class ShoppingCartCardComponent implements OnInit {
   }
   AddToTotal(newNum:number){
     (this.subtotal = this.subtotal + newNum);
-    (this.tax = this.total * .07);
+    (this.tax += newNum * .07);
     this.total= this.tax + this.subtotal;
   }
   removeItem(remItem:any){
