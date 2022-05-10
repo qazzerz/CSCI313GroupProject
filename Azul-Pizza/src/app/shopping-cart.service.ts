@@ -26,6 +26,7 @@ export class ShoppingCartService {
     this.shoppingCartList.push(newAny);
     console.log(this.getCartList());
     this.total = this.total+ newAny.price;
+    this.total = (this.total+ (newAny.price*.07));
     this.TotalUpdater.emit(this.total);
   }
  
@@ -34,6 +35,7 @@ export class ShoppingCartService {
       if (index > -1) {
         this.shoppingCartList.splice(index, 1);
         this.total = this.total - remItem.price;
+        this.total = (this.total - (remItem.price*.07));
         this.TotalUpdater.emit(this.total);
     }
   }
