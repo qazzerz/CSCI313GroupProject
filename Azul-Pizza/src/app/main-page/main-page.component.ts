@@ -24,9 +24,10 @@ export class MainPageComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.fetchTotal();
   }
 
-  total: any = this.serShopping.getCartPrice()
+  total: any = 0;
 
   showMainPage(){
     this.displayMain = true;
@@ -53,8 +54,13 @@ export class MainPageComponent implements OnInit {
     this.displayPizzaBuilder = true;
     this.displayCart = false;
   }
-  
+  fetchTotal(){
+    this.serShopping.TotalUpdater.subscribe(
+      (data)=>{
+        this.total = data;
+      });
+  }
  
-
+  
 
 }

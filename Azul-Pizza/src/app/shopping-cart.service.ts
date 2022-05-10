@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import {Pizza} from './pizza'
 
 @Injectable({
@@ -14,6 +14,7 @@ export class ShoppingCartService {
   shoppingCartList: any[]=[];
   total: number =0.00;
   constructor() { }
+  TotalUpdater = new EventEmitter<number>();
 
   getCartList(){
     return this.shoppingCartList;
@@ -24,22 +25,19 @@ export class ShoppingCartService {
   addItem(newAny:any){
     this.shoppingCartList.push(newAny);
     console.log(this.getCartList());
-    this.getCartPrice();
+    this.total = this.total+ newAny.price;
+    this.TotalUpdater.emit(this.total);
   }
-  getCartPrice(){
-    for(let l=0;l<this.shoppingCartList.length;l++){ //gernerating subtotals
-      this.total = this.total + (this.shoppingCartList[l].price);
-    }
-    return this.total
-  }
-  removeItem(remPizza:Pizza){
-    const index = this.shoppingCartList.indexOf(remPizza, 0);
+ 
+  removeItem(remItem:any){
+    const index = this.shoppingCartList.indexOf(remItem, 0);
       if (index > -1) {
         this.shoppingCartList.splice(index, 1);
-        
-      }
-      this.getCartPrice();
+        this.total = this.total - remItem.price;
+        this.TotalUpdater.emit(this.total);
+    }
   }
+      
   resetCart(){
     this.shoppingCartList = [];
   }
