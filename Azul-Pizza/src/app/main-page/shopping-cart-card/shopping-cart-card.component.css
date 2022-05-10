@@ -42,11 +42,7 @@ p{
     font-weight:500;
     font-size: large;
 }
-.mat-button-toggle-appearance-standard{
-    background-color:lightgreen;
-    border: 2px solid darkblue;
-    color: black;
-}
+
 input{
     
     background-color: lightblue;

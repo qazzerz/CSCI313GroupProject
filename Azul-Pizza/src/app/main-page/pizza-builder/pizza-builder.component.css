@@ -1,9 +1,13 @@
 .mat-button-toggle1{
-    background-color: gray;
+    background-color:blue;
+    border: 1px solid darkblue;
+    color: black;
 
 }
 .mat-button-toggle2{
-    background-color: darkgray;
+    background-color:lightgreen;
+    border: 1px solid darkblue;
+    color: black;
 
 }
 .toppings{
@@ -23,12 +27,7 @@
 input[type="checkbox"] {
     opacity: 0;
 }
-.mat-button-toggle-appearance-standard{
-    background-color:lightgreen;
-    border: 1px solid darkblue;
-    color: black;
 
-}
 button{
     background-color:lightgreen;
     border: 1px solid darkblue;
