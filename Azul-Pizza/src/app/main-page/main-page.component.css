@@ -17,9 +17,9 @@
 }
 .shoppingButton{
   left: 50%;
-  top: .001%;
+  
   float: right;
-  margin-right: 50px;
+  margin-right: 100px;
   border: none;
   
 }
