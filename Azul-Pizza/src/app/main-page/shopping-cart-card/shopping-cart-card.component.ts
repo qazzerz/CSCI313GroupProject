@@ -58,7 +58,7 @@ export class ShoppingCartCardComponent implements OnInit {
     this.cartListService.removeItem(remItem);
     this.tax = this.tax - (remItem.price * .07);
     this.cartLengh();
-    this.total = this.total - remItem.price - this.tax;
+    this.total = this.total - remItem.price - (remItem.price * .07);
 
   }
 
