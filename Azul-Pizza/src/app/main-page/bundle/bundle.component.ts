@@ -47,9 +47,7 @@ export class BundleComponent implements OnInit {
       this.pricedOutSingleTopping = 10;
     }
 
-    ngOnChanges(){
-      
-    }
+    ngOnChanges(){}
     
     //Pizza and Pop
     updatePizza(){
