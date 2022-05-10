@@ -139,7 +139,7 @@ closeModal(){
       this.customPizza.desciption += ", Toppings:"
     }
     for (let topping of this.toppings) {
-      this.customPizza.desciption += ", " + topping
+      this.customPizza.desciption += " " + topping
     }
     if(this.toppings.length > 5)
     {
