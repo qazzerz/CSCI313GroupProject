@@ -16,9 +16,14 @@
   height: 50px;
 }
 .shoppingButton{
+  position: absolute;
+  left: 50%;
+  top: .001%;
   float: right;
   margin-right: 50px;
   border: none;
+ 
+  
 }
 
 .pizzaCardBuilder{
@@ -45,8 +50,8 @@
 .buttonGroup{
   width: 1000px;
   margin-top: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   margin-left: 100px;
-
-
+  position: absolute;
+  left: 30%;
 }

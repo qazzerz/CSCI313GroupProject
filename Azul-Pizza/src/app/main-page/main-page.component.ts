@@ -24,12 +24,13 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   showMainPage(){
     this.displayMain = true;
     this.displayDeal = false;
     this.displayPizzaBuilder = false;
     this.displayCart = false;
+    
   }
   showDeals(){
     this.displayMain = false;
