@@ -21,10 +21,13 @@ export class MainPageComponent implements OnInit {
   displayCart: boolean = false;
   shoppingCart: string = 'https://cdn2.iconfinder.com/data/icons/shopping-cart-16/64/Shopping_Cart-01-512.png';
   constructor(private serShopping: ShoppingCartService) { }
+  
 
   ngOnInit(): void {
   }
-  
+
+  total: any = this.serShopping.getCartPrice()
+
   showMainPage(){
     this.displayMain = true;
     this.displayDeal = false;
@@ -50,6 +53,7 @@ export class MainPageComponent implements OnInit {
     this.displayPizzaBuilder = true;
     this.displayCart = false;
   }
+  
  
 
 
