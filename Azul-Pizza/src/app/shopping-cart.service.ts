@@ -42,5 +42,6 @@ export class ShoppingCartService {
       
   resetCart(){
     this.shoppingCartList = [];
+    this.TotalUpdater.emit(this.total = 0);
   }
 }
