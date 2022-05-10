@@ -19,9 +19,11 @@
                             <li *ngFor = "let item of cartList">
                                 <span>{{item.name}}   ${{item.price}}</span>
                                 <p>  Desciption: {{item.desciption}}</p>
-                                <mat-button-toggle-group>
-                                    <mat-button-toggle  class ="buttonR" (click)="removeItem(item)" value="remove">Remove Item</mat-button-toggle>
-                                </mat-button-toggle-group>
+                                <div style ="  margin-bottom: 1em;">
+                                    <mat-button-toggle-group>
+                                        <mat-button-toggle  class ="buttonR" (click)="removeItem(item)" value="remove">Remove Item</mat-button-toggle>
+                                    </mat-button-toggle-group>
+                                </div>
                             </li>
                     </div>
                     
